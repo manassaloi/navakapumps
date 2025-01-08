@@ -3,3 +3,113 @@
 ---
 
 @import "minima";
+
+// Product page layout
+.product-container {
+  display: flex;
+  gap: 2rem;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 1rem;
+  
+  // Ensure it doesn't interfere with header
+  clear: both;
+  position: relative;
+  z-index: 0;
+}
+
+.product-sidebar {
+  flex: 0 0 250px;
+  padding: 1rem;
+  background: #FFFFE3;
+  border-radius: 4px;
+}
+
+.product-content {
+  flex: 1;
+  min-width: 0; // Prevents content from overflowing
+}
+
+.product-nav {
+  position: sticky;
+  top: 2rem;
+
+  h3 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.product-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #FFFFE3;
+      text-decoration: none;
+    }
+  }
+
+  .active a {
+    background-color: #007bff;
+    color: white;
+  }
+}
+
+// Responsive layout
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .product-nav {
+    position: relative;
+    top: 0;
+  }
+}
+
+// Fix header layout
+.site-header {
+  border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 1.865;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.site-title {
+  display: inline-block;
+}
+
+.site-nav {
+  display: inline-block;
+  
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    margin-left: 20px;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

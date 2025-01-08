@@ -12,7 +12,7 @@
 }
 
 .site-title {
-  @include relative-font-size(1.25);
+  @include relative-font-size(1);
   font-weight: 400;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -74,7 +74,7 @@
   }
 
   .page-link {
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.5);
     color: $a-color;
     line-height: $base-line-height;
     display: block;
@@ -198,7 +198,7 @@
 
 .page-heading {
 //  @include $page-heading-font-family;
-  @include relative-font-size(3);
+  @include relative-font-size(1.5);
   font-weight: 800;
 }
 

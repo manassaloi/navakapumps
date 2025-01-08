@@ -1,5 +1,5 @@
 ---
-layout: page
-title: Products and Services
+layout: productpage
+title: Products
 permalink: /products/
 ---
