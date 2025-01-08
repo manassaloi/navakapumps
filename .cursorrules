@@ -1,0 +1,106 @@
+List of rules and guidelines for this project.
+
+1. General Best Practices
+	1.	Write Clean, Readable Code
+	•	Use meaningful names for variables, classes, and IDs.
+	•	Write comments to explain non-obvious code or custom implementations.
+	•	Avoid hardcoding values. Use variables and mixins where possible (in SCSS).
+	2.	Optimize Performance
+	•	Minimize DOM manipulations in JavaScript.
+	•	Optimize assets such as images and fonts.
+	•	Generate lightweight, responsive, and accessible code.
+	3.	Follow Standards
+	•	Conform to HTML5, CSS3, and modern JavaScript (ES6+) standards.
+	•	Follow Jekyll conventions for layouts, includes, and data files.
+	•	Ensure compatibility across major browsers.
+	4.	Accessibility
+	•	Follow WCAG 2.1 guidelines for accessibility.
+	•	Use semantic HTML tags and ARIA roles where necessary.
+
+2. Jekyll-Specific Rules
+	1.	File Structure
+	•	Follow Jekyll’s folder structure (_layouts, _includes, _sass, assets, _data, etc.).
+	•	Use collections and data files (_data/*.yml) for dynamic content.
+	2.	Liquid Templates
+	•	Use Liquid tags and filters effectively.
+	•	Avoid inline CSS and JavaScript in templates; use external files instead.
+	•	Implement reusable components with _includes.
+	3.	Minima Theme Customizations
+	•	Avoid directly editing minima files; use _sass for overrides.
+	•	Extend the theme by creating additional layouts or includes.
+	4.	Documentation
+	•	Refer to the Jekyll Documentation for theme customization and configuration details.
+
+3. SCSS Rules
+	1.	Modular SCSS
+	•	Split styles into small, manageable files and organize them in the _sass folder.
+	•	Follow a clear structure: variables, mixins, base styles, components, utilities, etc.
+	2.	Variables and Mixins
+	•	Use variables for colors, spacing, fonts, etc., to maintain consistency.
+	•	Create mixins for reusable styles (e.g., media queries).
+	3.	Naming Conventions
+	•	Follow the BEM (Block Element Modifier) naming convention for CSS classes.
+	•	Example: .header__nav--active.
+	4.	Avoid Specificity Wars
+	•	Minimize the use of !important.
+	•	Keep selector nesting shallow to avoid specificity issues.
+	5.	Responsive Design
+	•	Use mobile-first design and SCSS media query mixins.
+	6.	Resources
+	•	SCSS Documentation
+
+4. CSS Rules
+	1.	Organization
+	•	Keep CSS rules logically grouped (e.g., layout, typography, components).
+	•	Maintain a clean style.css file if overriding Minima’s styles.
+	2.	Flexbox and Grid
+	•	Use modern layout techniques like Flexbox and Grid.
+	•	Avoid outdated properties like float for layout.
+	3.	Fallbacks
+	•	Provide fallbacks for properties not supported by older browsers.
+	4.	Resources
+	•	CSS Documentation (MDN)
+
+5. JavaScript Rules
+	1.	ES6 Syntax
+	•	Use modern JavaScript syntax (e.g., let/const, arrow functions, template literals).
+	•	Avoid using var.
+	2.	DOM Manipulation
+	•	Use efficient selectors (document.querySelector/querySelectorAll).
+	•	Minimize heavy DOM traversals and reflows.
+	3.	Event Handling
+	•	Use event delegation for dynamic elements.
+	•	Avoid inline event handlers.
+	4.	Code Modularity
+	•	Write modular JavaScript using ES6 modules if possible.
+	•	Avoid long monolithic scripts.
+	5.	Performance
+	•	Use async/defer for script loading where applicable.
+	•	Avoid blocking UI threads with long-running code.
+	6.	Resources
+	•	JavaScript Documentation (MDN)
+
+6. Minima Theme Rules
+	1.	Theme Overriding
+	•	Use _sass/minima to override Minima styles safely.
+	•	Avoid modifying gem files directly.
+	2.	Custom Assets
+	•	Place additional stylesheets and scripts in the assets folder.
+	•	Link them using Jekyll’s {{ site.baseurl }} for proper path resolution.
+	3.	Layout and Includes
+	•	Extend the default layout for custom pages.
+	•	Use _includes for reusable components like headers, footers, and modals.
+	4.	Resources
+	•	Minima Theme Documentation
+
+7. Performance Optimization
+	1.	Asset Minification
+	•	Minify CSS and JavaScript before deployment.
+	•	Use Jekyll plugins like jekyll-assets or external tools.
+	2.	Lazy Loading
+	•	Enable lazy loading for images using the loading="lazy" attribute.
+	3.	Caching
+	•	Add cache-busting techniques to asset URLs.
+	4.	CDN Usage
+	•	Serve static assets (e.g., images, fonts) via a CDN for faster delivery.
+
