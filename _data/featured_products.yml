@@ -1,0 +1,11 @@
+- name: CRI Industrial Pumps
+  image: /assets/img/products-range1.jpg
+  description: High-quality industrial pumps for various applications
+  
+- name: Roto Pumps
+  image: /assets/img/products-range3.jpg
+  description: Durable and flexible hoses for industrial use
+  
+- name: Agricultural Machine
+  image: /assets/img/products-range4.jpg
+  description: Efficient 

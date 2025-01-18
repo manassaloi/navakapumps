@@ -4,14 +4,18 @@ title: About us
 permalink: /aboutus/
 ---
 
-Established in the year 2016, at the Pump City, Coimbatore, (Tamil Nadu ), India, we, Navaka India is a reliable source point for all types of Industrial Pumps. We are the authorized deal for ROTO SCREW PUMPS, CRI INDUSTRIAL RANGE OF CENTRIFUGAL PUMPS. ROTO DEL GEAR PUMPS, LEAKPROOF CHEMICAL CENTRIFUGAL PUMPS.
+Established in 2016 in Pump City, Coimbatore, Tamil Nadu, India, Navaka India is a trusted supplier of a wide range of industrial pumps. We are the authorized dealer for Roto Screw Pumps, CRI Industrial Range of Centrifugal Pumps, Rotodel Gear Pumps, and Leakproof Chemical Centrifugal Pumps.
 
-Navaka India, is a reputed trading house and exporter of various industrial products. We provide pumping solutions to both domestic and international clients as asingle source point for various types of pumps specialized in supply of all the required pumps for one specific project. We strive to render industrial products that are known for their reliability, quality, efficiency and standards. Our range mainly includes all types  industrial pumps, flexible hose, strainers, filters, etc.
+Navaka India has built a strong reputation as a reliable trading house and exporter of various industrial products. We provide comprehensive pumping solutions to both domestic and international clients, serving as a single-source provider for diverse types of pumps. We specialize in supplying all necessary pumps for specific projects, ensuring seamless project execution.
 
-The products that we currently handle:
-Industrial Pumps
-Butemen Duty Hoses
-Radcoflex Flexible Hoses
-Bentone Burners
-Strainers & Filters
-Fire Fighting Pumps
+Our commitment is to deliver industrial products known for their reliability, quality, efficiency, and compliance with industry standards. Our product range primarily includes various types of industrial pumps, flexible hoses, strainers, filters, and more.
+
+Products We Offer:
+- Industrial Pumps
+- Bitumen Duty Hoses
+- Radcoflex Flexible Hoses
+- Bentone Burners
+- Strainers & Filters
+- Fire Fighting Pumps
+
+At Navaka India, we continuously strive to expand our product range and improve our services to meet the evolving needs of our clients across industries.
