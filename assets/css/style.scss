@@ -7,8 +7,7 @@
 // Product page layout
 .product-container {
   display: flex;
-  gap: 2rem;
-  max-width: $content-width;
+  gap: 3rem;
   margin: 0 auto;
   padding: 1rem;
   
@@ -19,7 +18,7 @@
 }
 
 .product-sidebar {
-  flex: 0 0 250px;
+  flex: 0 0 200px;
   padding: 1rem;
   background: #FFFFFF;
   border-radius: 4px;
@@ -27,7 +26,7 @@
 
 .product-content {
   flex: 1;
-  min-width: 0; // Prevents content from overflowing
+  min-width: 0;
 }
 
 .product-nav {
@@ -70,20 +69,41 @@
   }
 }
 
-// Responsive layout
+// Responsive layout - updated breakpoints
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+  
+  .product-container {
+    gap: 2rem;
+  }
+  
+  .product-sidebar {
+    flex: 0 0 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .product-container {
     flex-direction: column;
+    padding: 0.5rem;
   }
 
   .product-sidebar {
     flex: none;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .product-nav {
     position: relative;
     top: 0;
+  }
+  
+  .wrapper {
+    padding: 0 0.5rem;
   }
 }
 
