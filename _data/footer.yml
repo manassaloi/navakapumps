@@ -1,0 +1,17 @@
+about:
+  title: About Navaka
+  description: A reputed trading house and exporter of various industrial products based in Coimbatore.
+
+products:
+  title: Products
+  items:
+    - CRI Industrial Pumps
+    - Roto Pumps
+    - Agricultural Machines
+    - Flexible Hoses
+
+contact:
+  title: Contact
+  email: info@navaka.com
+  phone: +91 XXX XXX XXXX
+  location: Coimbatore, India 

@@ -1,18 +1,34 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+{% assign about = site.data.footer.about %}
+{% assign products = site.data.footer.products %}
+{% assign contact = site.data.footer.contact %}
 
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col one-half">
-      <p class="footer-heading"> © Navaka India.</p>
-
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__column">
+        <h2 class="footer__heading">{{ about.title }}</h2>
+        <p class="footer__text">{{ about.description }}</p>
       </div>
-      <div class="footer-col one-half" style="text-align: right;">
-       <h4></h4>
+
+      <div class="footer__column">
+        <h2 class="footer__heading">{{ products.title }}</h2>
+        <ul class="footer__list">
+          {% for item in products.items %}
+            <li class="footer__list-item">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h2 class="footer__heading">{{ contact.title }}</h2>
+        <p class="footer__text">Email: {{ contact.email }}</p>
+        <p class="footer__text">Phone: {{ contact.phone }}</p>
+        <p class="footer__text">{{ contact.location }}</p>
       </div>
     </div>
 
+    <div class="footer__copyright">
+      <p class="footer__text">© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
   </div>
-
 </footer>
