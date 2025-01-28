@@ -1,16 +1,39 @@
 ---
 layout: default
 ---
-<article class="post">
-
-  <header class="post-header">
-    <h4 class="page-heading">{{ page.title }}</h4>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
+<div class="hero-section">
+  <h1 class="hero-title">Navaka is Excellence, Engineered</h1>
+  <p class="hero-subtitle">Driving Industrial Efficiency with Reliable Pump Solutions</p>
+  <div class="hero-buttons">
+    <a href="/products" class="button primary">Explore Products →</a>
+    <a href="/contact" class="button secondary">Contact Sales</a>
   </div>
+</div>
 
-</article>
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon">{% include icons/shield.html %}</div>
+    <h3>Quality Assured</h3>
+    <p>Rigorous testing and meticulous quality control for every product</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">{% include icons/tech.html %}</div>
+    <h3>Advanced Technology</h3>
+    <p>Latest project and data management technologies implementation</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">{% include icons/solutions.html %}</div>
+    <h3>Expert Solutions</h3>
+    <p>Innovative, cost-effective solutions for specific challenges</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">{% include icons/support.html %}</div>
+    <h3>Complete Support</h3>
+    <p>One-stop solution for all project-specific pumping needs</p>
+  </div>
+</div>
 
 {% include featured-products.html %}

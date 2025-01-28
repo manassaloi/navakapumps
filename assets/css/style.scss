@@ -107,93 +107,170 @@
   }
 }
 
-// Fix header layout
+// Header styles
 .site-header {
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-.site-title {
-  display: inline-block;
-}
-
-.site-nav {
-  display: inline-block;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  background: white;
   
-  .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
-    margin-left: 20px;
-    
-    &:hover {
-      text-decoration: none;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #18181B;
+  }
+  
+  .site-nav {
+    .page-link {
+      margin-left: 2rem;
+      color: #18181B;
+      font-weight: 500;
+      
+      &:last-child {
+        padding: 0.75rem 1.5rem;
+        background: #18181B;
+        color: white;
+        border-radius: 8px;
+      }
     }
   }
 }
 
-// Featured Products Section
-.featured-products {
-  padding: 4rem 0;
-  background: #f8f8f8;
-  margin-top: 2rem;
+// Hero section
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 1rem;
   
-  .section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    @include relative-font-size(1.5);
-    font-weight: 800;
+  .hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+    color: #18181B;
   }
   
-  .featured-products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: $content-width;
-    margin: 0 auto;
-    padding: 0 1rem;
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: #6B7280;
+    margin-bottom: 3rem;
   }
   
-  .product-card {
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    
+    .button {
+      padding: 0.875rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.2s;
+      
+      &.primary {
+        background: #18181B;
+        color: white;
+        
+        &:hover {
+          background: #000;
+        }
+      }
+      
+      &.secondary {
+        background: white;
+        color: #18181B;
+        border: 1px solid #E5E7EB;
+        
+        &:hover {
+          background: #F9FAFB;
+        }
+      }
+    }
+  }
+}
+
+// Features section
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  
+  .feature-card {
     background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
     
-    &:hover {
-      transform: translateY(-4px);
-    }
-    
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .feature-icon {
+      margin-bottom: 1.5rem;
+      
+      svg {
+        width: 32px;
+        height: 32px;
+        stroke: #18181B;
+      }
     }
     
     h3 {
-      padding: 1rem;
-      margin: 0;
-      @include relative-font-size(1);
+      font-size: 1.25rem;
       font-weight: 600;
+      color: #18181B;
+      margin-bottom: 0.75rem;
     }
     
     p {
-      padding: 0 1rem 1rem;
-      color: $grey-color;
-      @include relative-font-size(0.8);
-      margin-bottom: 0;
+      font-size: 1rem;
+      color: #6B7280;
+      line-height: 1.5;
     }
+  }
+}
+
+// Responsive styles
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-section .hero-title {
+    font-size: 3.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .featured-products {
-    .featured-products-grid {
-      grid-template-columns: 1fr;
-      padding: 0 2rem;
+  .site-header {
+    padding: 1rem;
+    
+    .site-nav .page-link {
+      margin-left: 1rem;
     }
+  }
+  
+  .hero-section {
+    padding: 4rem 1rem;
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+    }
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 }
