@@ -14,13 +14,8 @@
       </label>
 
       <div class="trigger">
-        {%- for page in site.pages -%}
-          {%- if page.title -%}
-            {% assign path_parts = page.path | split: '/' %}
-            {% if path_parts.size == 1 and page.path contains '.md' %}
-              <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-            {%- endif -%}
-          {%- endif -%}
+        {%- for item in site.data.navigation -%}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
         {%- endfor -%}
       </div>
     </nav>

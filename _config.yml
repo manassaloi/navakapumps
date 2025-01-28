@@ -55,7 +55,13 @@ compress_html:
   blanklines: false
   profile: false
 
-incremental: true
+incremental: false
+cache: false
 liquid:
   error_mode: strict
   strict_filters: true
+
+# Force browser to reload assets
+sass:
+  style: expanded
+  cache: false
