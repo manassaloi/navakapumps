@@ -19,7 +19,7 @@ List of rules and guidelines for this project.
 
 2. Jekyll-Specific Rules
 	1.	File Structure
-	•	Follow Jekyll’s folder structure (_layouts, _includes, _sass, assets, _data, etc.).
+	•	Follow Jekyll folder structure (_layouts, _includes, _sass, assets, _data, etc.).
 	•	Use collections and data files (_data/*.yml) for dynamic content.
 	2.	Liquid Templates
 	•	Use Liquid tags and filters effectively.
@@ -86,7 +86,7 @@ List of rules and guidelines for this project.
 	•	Avoid modifying gem files directly.
 	2.	Custom Assets
 	•	Place additional stylesheets and scripts in the assets folder.
-	•	Link them using Jekyll’s {{ site.baseurl }} for proper path resolution.
+	•	Link them using Jekyll {{ site.baseurl }} for proper path resolution.
 	3.	Layout and Includes
 	•	Extend the default layout for custom pages.
 	•	Use _includes for reusable components like headers, footers, and modals.
@@ -103,4 +103,3 @@ List of rules and guidelines for this project.
 	•	Add cache-busting techniques to asset URLs.
 	4.	CDN Usage
 	•	Serve static assets (e.g., images, fonts) via a CDN for faster delivery.
-

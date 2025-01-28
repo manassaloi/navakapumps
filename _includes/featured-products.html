@@ -1,11 +1,13 @@
 <section class="featured-products">
   <h2 class="section-title">Featured Products</h2>
+  <p class="section-subtitle">Discover our range of high-quality industrial pumps and equipment</p>
   <div class="featured-products-grid">
     {% for product in site.data.featured_products %}
       <div class="product-card">
         <img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
         <h3>{{ product.name }}</h3>
         <p>{{ product.description }}</p>
+        <a href="/products#{{ product.name | slugify }}" class="learn-more">Learn More</a>
       </div>
     {% endfor %}
   </div>
