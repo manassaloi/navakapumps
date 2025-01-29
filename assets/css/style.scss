@@ -161,9 +161,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 8rem 1rem;
   max-width: 1400px;
   margin: 0 auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/navakahomebanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   .hero-title {
     font-size: 3.5rem;
@@ -171,12 +175,12 @@
     line-height: 1.1;
     max-width: 800px;
     margin-bottom: 1rem;
-    color: #18181B;
+    color: white;
   }
   
   .hero-subtitle {
     font-size: 1rem;
-    color: #6B7280;
+    color: #E5E7EB;
     margin-bottom: 2rem;
     max-width: 600px;
   }
@@ -205,6 +209,7 @@
       &.secondary {
         background: #18181B;
         color: white;
+        border: 1px solid rgba(255, 255, 255, 0.1);
         
         &:hover {
           background: #000000;
