@@ -134,12 +134,22 @@
       color: #18181B;
       font-weight: 500;
       font-size: 0.9rem;
+      text-decoration: none;
+    }
+    
+    // More specific selector to override Minima theme
+    .page-link[href="/products/"] {
+      padding: 0.625rem 1.25rem !important;
+      background: white !important;
+      color: #18181B !important;
+      border: 1px solid #E5E7EB !important;
+      border-radius: 6px;
+      transition: all 0.2s;
+      margin-left: 1.5rem;
+      text-decoration: none;
       
-      &:last-child {
-        padding: 0.5rem 1rem;
-        background: #18181B;
-        color: white;
-        border-radius: 6px;
+      &:hover {
+        background: #F9FAFB !important;
       }
     }
   }
@@ -183,21 +193,21 @@
       transition: all 0.2s;
       
       &.primary {
-        background: #18181B;
-        color: white;
-        
-        &:hover {
-          background: #000;
-        }
-      }
-      
-      &.secondary {
         background: white;
         color: #18181B;
         border: 1px solid #E5E7EB;
         
         &:hover {
           background: #F9FAFB;
+        }
+      }
+      
+      &.secondary {
+        background: #18181B;
+        color: white;
+        
+        &:hover {
+          background: #000000;
         }
       }
     }
@@ -344,7 +354,7 @@
 
 // Commitment Section
 .commitment-section {
-  padding: 3rem 2rem;
+  padding: 1rem 2rem 3rem;
   background: #F9FAFB;
   text-align: center;
   
@@ -394,7 +404,7 @@
 
 @media (max-width: 768px) {
   .commitment-section {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem;
     
     .section-title {
       font-size: 2rem;
@@ -515,11 +525,11 @@
   }
   
   .commitment-section {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem;
     
     .section-title {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
   
