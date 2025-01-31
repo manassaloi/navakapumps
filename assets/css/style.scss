@@ -26,6 +26,13 @@ $color-white: #FFFFFF;
 $color-border: rgba(229, 231, 235, 0.5);
 $color-shadow: rgba(0, 0, 0, 0.05);
 
+// Spacing Variables
+$space-4: 1rem;      // 16px
+$space-6: 1.5rem;    // 24px
+$space-8: 2rem;      // 32px
+$space-10: 2.5rem;   // 40px
+$space-12: 3rem;     // 48px
+
 @import "minima";
 @import "custom/home";
 @import "custom/footer";
@@ -196,10 +203,10 @@ body {
   position: relative;
   overflow: hidden;
   background: $color-white;
-  padding: 4rem 0;
+  padding: $space-12 0;  // 48px vertical padding
   
   .hero-content {
-    padding: 0 4rem;
+    padding: 0 $space-8;
     position: relative;
     z-index: 2;
     
@@ -219,7 +226,7 @@ body {
     font-size: $font-size-h1;
     font-weight: bold;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: $space-6;  // 24px bottom margin
     color: $color-secondary;
     position: relative;
     
@@ -229,7 +236,7 @@ body {
       width: 80px;
       height: 4px;
       background: $color-accent;
-      margin-top: 1.5rem;
+      margin-top: $space-6;
     }
   }
   
@@ -263,8 +270,9 @@ body {
   
   .hero-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: $space-4;
     align-items: center;
+    margin-top: $space-8;  // 32px top margin
     
     .button {
       padding: 0.75rem 1.5rem;
@@ -306,14 +314,14 @@ body {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: $space-4;  // 16px gap
   max-width: 1400px;
-  margin: 2rem auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: $space-8 $space-4;  // 32px vertical padding
   
   .feature-card {
     background: $color-white;
-    padding: 1.25rem;
+    padding: $space-4;  // 16px padding
     border-radius: 8px;
     border: 1px solid $color-border;
     box-shadow: 0 1px 2px $color-shadow;
@@ -346,7 +354,7 @@ body {
 
 // Featured Products Section
 .featured-products {
-  padding: 4rem 2rem 5rem;
+  padding: $space-10 $space-4;  // 40px vertical padding
   text-align: center;
   max-width: 1400px;
   margin: 0 auto;
@@ -374,7 +382,7 @@ body {
 .featured-products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: $space-6;  // 24px gap
 }
 
 .product-card {
@@ -382,7 +390,7 @@ body {
   border-radius: 8px;
   border: 1px solid $color-border;
   box-shadow: 0 1px 2px $color-shadow;
-  padding: 1.5rem;
+  padding: $space-4;  // 16px padding
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -563,7 +571,7 @@ body {
 
 @media (max-width: 1024px) {
   .featured-products {
-    padding: 3rem 1.5rem 4rem;
+    padding: $space-8 $space-4;
     
     .section-title {
       font-size: $font-size-h3;
@@ -577,7 +585,7 @@ body {
   
   .featured-products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: $space-4;
   }
 }
 
@@ -591,7 +599,7 @@ body {
   }
   
   .hero-section {
-    padding: 2rem 1rem;
+    padding: $space-6 $space-4;
     
     .hero-title {
       font-size: $font-size-h3;
@@ -613,8 +621,8 @@ body {
   
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
-    padding: 0 1rem;
+    gap: $space-4;
+    padding: $space-6 $space-4;
     margin: 1.5rem auto;
   }
   
@@ -645,7 +653,7 @@ body {
   }
   
   .featured-products {
-    padding: 2.5rem 1rem 3rem;
+    padding: $space-6 $space-4;
     
     .section-title {
       font-size: $font-size-h3;
@@ -659,11 +667,11 @@ body {
   
   .featured-products-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: $space-4;
   }
   
   .product-card {
-    padding: 1.25rem;
+    padding: $space-4;
     
     .image-container {
       padding: 1rem;
@@ -690,7 +698,7 @@ body {
 @media (max-width: 1024px) {
   .hero-section {
     grid-template-columns: 1fr;
-    padding: 3rem 2rem;
+    padding: $space-8 $space-4;
     background: $color-white;
     
     .hero-content {
