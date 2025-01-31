@@ -158,31 +158,49 @@
 // Hero section
 .hero-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 8rem 1rem;
+  justify-content: space-between;
+  padding: 4rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/navakahomebanner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('/assets/img/navakahomebanner.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    padding-right: 2rem;
+    z-index: 2;
+  }
   
   .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
-    max-width: 800px;
     margin-bottom: 1rem;
-    color: white;
+    color: #18181B;
   }
   
   .hero-subtitle {
-    font-size: 1rem;
-    color: #E5E7EB;
+    font-size: 1.125rem;
+    color: #4B5563;
     margin-bottom: 2rem;
-    max-width: 600px;
+    line-height: 1.6;
   }
   
   .hero-buttons {
@@ -195,6 +213,7 @@
       font-weight: 500;
       font-size: 0.9rem;
       transition: all 0.2s;
+      text-decoration: none;
       
       &.primary {
         background: white;
@@ -502,14 +521,29 @@
   }
   
   .hero-section {
-    padding: 3rem 1rem;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    min-height: auto;
+    
+    &::after {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-top: 2rem;
+    }
+    
+    .hero-content {
+      max-width: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
     
     .hero-title {
       font-size: 2rem;
     }
     
     .hero-buttons {
-      flex-direction: column;
+      justify-content: center;
     }
   }
   
@@ -585,6 +619,25 @@
     .learn-more {
       padding: 0.5rem 1rem;
       font-size: 0.8125rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 3rem 1.5rem;
+    min-height: 500px;
+    
+    &::after {
+      width: 45%;
+    }
+    
+    .hero-content {
+      max-width: 50%;
+    }
+    
+    .hero-title {
+      font-size: 2.75rem;
     }
   }
 }
