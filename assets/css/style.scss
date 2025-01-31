@@ -164,7 +164,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 $space-6;
   }
   
   .site-title {
@@ -174,6 +176,11 @@ body {
   }
   
   .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    
     .page-link {
       margin-left: 1.5rem;
       color: $color-secondary;
@@ -727,6 +734,14 @@ body {
       &::before {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    .wrapper {
+      padding: 0 $space-4;
     }
   }
 }
