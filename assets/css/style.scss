@@ -209,7 +209,7 @@ body {
   min-height: 600px;
   position: relative;
   overflow: hidden;
-  background: $color-white;
+  background: #F9FAFB;
   padding: $space-12 $space-6; // 48px vertical, 24px horizontal
   
   .hero-content {
@@ -718,7 +718,7 @@ body {
   .hero-section {
     grid-template-columns: 1fr;
     padding: $space-8 $space-4;
-    background: $color-white;
+    background: #F9FAFB;
     
     .hero-content {
       padding: 0;
@@ -727,34 +727,6 @@ body {
       &::before {
         display: none;
       }
-    }
-    
-    .hero-title {
-      font-size: $font-size-h2;
-      
-      &::after {
-        margin: 1.5rem auto 0;
-      }
-    }
-    
-    .hero-subtitle {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .hero-image {
-      margin: 2rem 0 0;
-      height: 400px;
-      width: 100%;
-      
-      &::before {
-        border-radius: 12px;
-      }
-    }
-    
-    .hero-buttons {
-      justify-content: center;
     }
   }
 }
