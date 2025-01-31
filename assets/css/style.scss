@@ -1,6 +1,7 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+sass: true
 ---
+@charset "utf-8";
 
 // Brand Colors
 $color-primary: #1E3D6B;    // Navaka Blue
@@ -489,7 +490,7 @@ body {
 .cta-section {
   padding: 4rem 2rem;
   text-align: center;
-  background: $color-primary;
+  background: $color-secondary;
   border-radius: 8px;
   margin: 3rem auto;
   max-width: 1400px;
