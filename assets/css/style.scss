@@ -40,9 +40,104 @@ $space-12: 3rem;     // 48px (2xl)
 $container-max: 1152px;    // max-w-6xl
 $container-content: 768px; // max-w-3xl
 
+// First import minima with default variables
 @import "minima";
+
+// Then override the footer styles
+.footer {
+  padding: $space-8 0;
+  background: $color-white;
+  border-top: 1px solid $color-border;
+  font-size: $font-size-small;
+  
+  .container {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 $space-6;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-6;
+    margin-bottom: $space-6;
+  }
+  
+  &__column {
+    min-width: 0;
+  }
+  
+  &__heading {
+    font-size: $font-size-body;
+    font-weight: 600;
+    color: $color-secondary;
+    margin-bottom: $space-4;
+  }
+  
+  &__text {
+    font-size: $font-size-small;
+    color: $color-secondary;
+    line-height: 1.6;
+    margin-bottom: $space-2;
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  &__list-item {
+    font-size: $font-size-small;
+    color: $color-secondary;
+    margin-bottom: $space-2;
+  }
+  
+  &__copyright {
+    text-align: center;
+    padding-top: $space-4;
+    border-top: 1px solid $color-border;
+    
+    .footer__text {
+      color: $color-secondary;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    .container {
+      padding: 0 $space-4;
+    }
+    
+    &__grid {
+      gap: $space-4;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: $space-6 0;
+    
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $space-4;
+    }
+    
+    &__column {
+      text-align: center;
+    }
+    
+    &__list {
+      text-align: center;
+    }
+  }
+}
+
+// Then import custom styles
 @import "custom/home";
-@import "custom/footer";
 
 body {
   font-family: $font-primary;
