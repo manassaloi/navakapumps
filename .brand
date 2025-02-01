@@ -31,3 +31,24 @@ Supporting Colors
 Success Green: #28A745
 Alert Red: #DC3545
 Info Blue: #17A2B8
+
+Typography
+
+Primary Font: Helvetica Neue
+
+Headers: Helvetica Neue Bold
+Body: Helvetica Neue Regular
+Technical Specifications: Helvetica Neue Light
+
+Web Safe Alternative
+
+Arial (when Helvetica Neue is unavailable)
+
+Type Scale
+
+H1: 48px/3rem (Bold)
+H2: 32px/2rem (Bold)
+H3: 24px/1.5rem (Semibold)
+H4: 20px/1.25rem (Semibold)
+Body: 16px/1rem (Regular)
+Small text: 14px/0.875rem (Regular)
