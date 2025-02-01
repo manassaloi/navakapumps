@@ -23,7 +23,7 @@ Advanced peristaltic pumps engineered for demanding industrial applications. Per
 #### [Agricultural Equipment](/products/agricultural-machine)
 State-of-the-art rice milling solutions designed specifically for Indian agriculture. Available in automatic (SN-4.7) and economic (SN-3.0) versions, combining efficiency with quality output.
 
-### Why Choose Navaka Products?
+#### Why Choose Navaka Products?
 
 * **Quality Assurance:** All our products meet stringent quality standards
 * **Comprehensive Support:** Expert technical assistance and after-sales service

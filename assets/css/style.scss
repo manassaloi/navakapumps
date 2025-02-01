@@ -40,6 +40,9 @@ $space-12: 3rem;     // 48px (2xl)
 $container-max: 1152px;    // max-w-6xl
 $container-content: 768px; // max-w-3xl
 
+// Add this before @import "minima"
+$a-color: #2B2B2B;
+
 // First import minima with default variables
 @import "minima";
 
