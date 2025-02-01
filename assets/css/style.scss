@@ -1,5 +1,5 @@
 ---
-sass: true
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
 
@@ -45,6 +45,116 @@ $a-color: #2B2B2B;
 
 // First import minima with default variables
 @import "minima";
+
+// Product Layout Styles - Single consolidated definition
+.product-container {
+  display: flex;
+  gap: $space-6;  // 1.5rem (24px)
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: $container-max;
+  clear: both;
+  position: relative;
+  z-index: 0;
+}
+
+.product-sidebar {
+  flex: 0 0 300px;  // Fixed width of 300px
+  margin-left: $space-12 !important;  // 48px margin
+  padding-left: 0;
+}
+
+.product-content {
+  flex: 1;
+  min-width: 0;  // Prevent flex item from overflowing
+  max-width: calc(100% - 300px - 1.5rem);  // Account for sidebar width and gap
+}
+
+.product-nav {
+  position: sticky;
+  top: 2rem;
+
+  h3 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.product-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+
+  .active a {
+    background-color: #007bff;
+    color: white;
+  }
+}
+
+// Responsive layout
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+  
+  .product-container {
+    gap: 1rem;
+  }
+  
+  .product-sidebar {
+    flex: 0 0 250px;
+  }
+  
+  .product-content {
+    max-width: calc(100% - 250px - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .product-sidebar {
+    flex: none;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .product-content {
+    max-width: 100%;
+  }
+
+  .product-nav {
+    position: relative;
+    top: 0;
+  }
+  
+  .wrapper {
+    padding: 0 0.5rem;
+  }
+}
 
 // Then override the footer styles
 .footer {
@@ -147,109 +257,6 @@ body {
   font-size: $font-size-body;
   line-height: 1.5;
   color: $color-secondary;
-}
-
-// Product page layout
-.product-container {
-  display: flex;
-  gap: 3rem;
-  margin: 0 auto;
-  padding: 1rem;
-  
-  // Ensure it doesn't interfere with header
-  clear: both;
-  position: relative;
-  z-index: 0;
-}
-
-.product-sidebar {
-  flex: 0 0 200px;
-  padding: 1rem;
-  background: #FFFFFF;
-  border-radius: 4px;
-}
-
-.product-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.product-nav {
-  position: sticky;
-  top: 2rem;
-
-  h3 {
-    margin-top: 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ddd;
-  }
-}
-
-.product-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  a {
-    display: block;
-    padding: 0.5rem;
-    color: #333;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-
-    &:hover {
-      background-color: #FFFFFF;
-      text-decoration: none;
-    }
-  }
-
-  .active a {
-    background-color: #007bff;
-    color: white;
-  }
-}
-
-// Responsive layout - updated breakpoints
-@media (max-width: 1024px) {
-  .wrapper {
-    max-width: 95%;
-    padding: 0 1rem;
-  }
-  
-  .product-container {
-    gap: 2rem;
-  }
-  
-  .product-sidebar {
-    flex: 0 0 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  .product-container {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-
-  .product-sidebar {
-    flex: none;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .product-nav {
-    position: relative;
-    top: 0;
-  }
-  
-  .wrapper {
-    padding: 0 0.5rem;
-  }
 }
 
 // Header styles

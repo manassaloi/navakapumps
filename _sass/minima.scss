@@ -22,6 +22,10 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $orange-color:     #f66a0a !default;
 $table-text-align: left !default;
 
+// Navigation alignment
+$nav-padding-left: 0 !default;
+$nav-margin-left: 0 !default;
+
 // Width of the content area
 $content-width:    800px !default;
 
@@ -56,3 +60,23 @@ $on-large:         $on-laptop !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+// Override navigation styles
+.site-nav {
+  padding-left: $nav-padding-left;
+  margin-left: $nav-margin-left;
+  
+  .page-link {
+    padding-left: $nav-padding-left;
+    margin-left: $nav-margin-left;
+  }
+}
+
+.site-title {
+  padding-left: $nav-padding-left;
+  margin-left: $nav-margin-left;
+}
+
+.products-section {
+  text-align: left;
+}
