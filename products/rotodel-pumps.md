@@ -9,6 +9,9 @@ title: Rotodel Pumps
 
 Navaka India offers Rotodel's comprehensive range of hose pumps (peristaltic pumps) engineered for demanding industrial applications. These pumps are renowned for their robust construction, reliability, and versatility in handling challenging fluids, from abrasive slurries to sensitive materials.
 
+![Rotodel Pumps – Engine driven Pump](/assets/img/engine-driven-gear-pump.jpg "Engine driven Pump")
+
+
 **Our Range of Rotodel Hose Pumps:**
 
 ### Industrial Hose Pumps - Series RPH & RPS

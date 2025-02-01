@@ -9,6 +9,8 @@ title: Agricultural Machine
 
 Navaka India, in association with Gutta Engineers Pvt. Ltd. Kolkata, offers state-of-the-art rice milling machines designed specifically for Indian farmers. As India stands as the world's second-largest rice producer after China, our machines are engineered to enhance milling efficiency and support the agricultural industry's growth.
 
+![Rice Milling Machine – Variant 1](/assets/img/products-range4.jpg "Rice Milling Machine Variant 1")
+
 **Our Rice Mill Models:**
 
 ### Automatic Version - SN-4.7

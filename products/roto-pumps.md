@@ -9,6 +9,10 @@ title: Roto Pumps
 
 Navaka India offers a comprehensive range of Roto pumps engineered for superior performance across diverse industrial applications. Our pumps combine innovative design with robust construction to deliver reliable and efficient fluid handling solutions.
 
+![Roto Pumps – Horizontal Model](/assets/img/roto-pump1.jpg "Horizontal Roto Pump")
+![Roto Pumps – Vertical Model](/assets/img/roto-pump2.jpg "Vertical Roto Pump")
+![Roto Pumps – Detailed View](/assets/img/roto-pump3.jpg "Detailed view of Roto Pump")
+
 **Our Range of Roto Pumps:**
 
 ### Horizontal External Bearing Pumps
