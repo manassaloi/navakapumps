@@ -1,19 +1,17 @@
 ---
 layout: default
 ---
-<div class="product-container">
+<div class="products-layout">
   <!-- Sidebar -->
-  <aside class="product-sidebar">
-    <nav class="product-nav">
-      <h3>Products</h3>
-      <ul class="product-menu">
-        {% for product in site.data.products %}
-          <li class="product-menu-item {% if page.url == product.url %}active{% endif %}">
-            <a href="{{ product.url | relative_url }}">{{ product.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
+  <aside class="products-sidebar">
+    <h2>Products</h2>
+    <ul>
+      <li><a href="/products/cri-industrial-pumps" {% if page.url == '/products/cri-industrial-pumps' %}class="active"{% endif %}>CRI Industrial Pumps</a></li>
+      <li><a href="/products/leak-proof-pumps" {% if page.url == '/products/leak-proof-pumps' %}class="active"{% endif %}>Leak Proof Pumps</a></li>
+      <li><a href="/products/pc-pumps" {% if page.url == '/products/pc-pumps' %}class="active"{% endif %}>PC Pumps</a></li>
+      <li><a href="/products/rotodel-pumps" {% if page.url == '/products/rotodel-pumps' %}class="active"{% endif %}>Rotodel Pumps</a></li>
+      <li><a href="/products/agricultural-machine" {% if page.url == '/products/agricultural-machine' %}class="active"{% endif %}>Agricultural Machine</a></li>
+    </ul>
   </aside>
 
   <!-- Main Content -->
