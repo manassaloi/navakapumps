@@ -980,3 +980,60 @@ label[for="nav-trigger"] {
   }
 }
 
+// Contact Page Styles
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 300px);
+  padding: $space-8;
+  
+  @include mobile-only {
+    padding: $space-4;
+  }
+}
+
+.contact-card {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: $space-8;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px $color-shadow;
+  
+  h1 {
+    font-size: $font-size-h2;
+    font-weight: 600;
+    color: $color-secondary;
+    margin-bottom: $space-6;
+    text-align: center;
+  }
+  
+  .contact-info {
+    display: grid;
+    gap: $space-6;
+  }
+  
+  .info-item {
+    display: grid;
+    gap: $space-2;
+    
+    strong {
+      font-size: $font-size-body;
+      font-weight: 600;
+      color: $color-secondary;
+    }
+    
+    span, a {
+      font-size: $font-size-body;
+      color: $color-secondary;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: $color-primary;
+    }
+  }
+}
+
