@@ -160,15 +160,19 @@ body {
   border-top: 0;
   border-bottom: 1px solid $color-border;
   min-height: auto;
-  padding: $space-4 0;  // Increased vertical padding
+  padding: $space-4 0;
   
   .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 $space-8;  // Increased horizontal padding
+    padding: 0 $space-8;
     max-width: $container-max;
     margin: 0 auto;
+
+    @include mobile-only {
+      padding: 0 $space-4;
+    }
   }
   
   .site-title {
@@ -177,41 +181,113 @@ body {
     color: $color-secondary;
     text-decoration: none;
     float: none;
-    padding-left: $space-4;  // Added left padding
+    padding-left: $space-4;
     
     &:hover {
       text-decoration: none;
+    }
+
+    @include mobile-only {
+      font-size: $font-size-body;
+      padding-left: $space-2;
     }
   }
   
   .site-nav {
     float: right;
     line-height: normal;
-    position: static;
-    border: none;
-    padding: 0;
-    background: none;
-    margin-right: $space-4;  // Added right margin
-    
-    .page-link {
-      font-size: $font-size-small;
-      font-weight: 500;
-      color: $color-secondary;
-      margin-left: $space-12;  // Increased space between nav items
-      line-height: normal;
-      
-      &[href$="/products/"] {
-        padding: $space-3 $space-6;  // Increased button padding
-        border: 1px solid $color-secondary;
-        border-radius: 6px;
+    position: relative;
+
+    @include tablet-up {
+      .page-link {
+        font-size: $font-size-body;
+        font-weight: 500;
+        color: $color-secondary;
+        margin-left: $space-8;
+        line-height: normal;
         
-        &:hover {
-          background: $color-background;
-          text-decoration: none;
+        &[href$="/products/"] {
+          padding: $space-3 $space-6;
+          border: 1px solid $color-secondary;
+          border-radius: 6px;
+          
+          &:hover {
+            background: $color-background;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    
+    @include mobile-only {
+      position: absolute;
+      top: 9px;
+      right: $space-4;
+      background-color: $color-white;
+      border: 1px solid $color-border;
+      border-radius: 6px;
+      text-align: right;
+      padding: $space-2;
+      z-index: 999;
+
+      .nav-trigger {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+        cursor: pointer;
+
+        > svg path {
+          fill: $color-secondary;
+        }
+      }
+
+      input ~ .trigger {
+        clear: both;
+        display: none;
+      }
+
+      input:checked ~ .trigger {
+        display: block;
+        padding-bottom: 5px;
+      }
+
+      .page-link {
+        display: block;
+        padding: $space-2 $space-4;
+        margin: 0;
+        font-size: $font-size-small;
+        
+        &:not(:last-child) {
+          margin-right: 0;
         }
       }
     }
   }
+}
+
+label[for="nav-trigger"] {
+  display: none;
+  
+  @include mobile-only {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+.nav-trigger {
+  display: none;
 }
 
 // Hero section
