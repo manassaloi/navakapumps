@@ -6,7 +6,7 @@ permalink: /products/
 
 ## Our Product Range
 
-Navaka India offers a comprehensive range of industrial and agricultural equipment, specializing in high-quality pumps and machinery. Our product portfolio is designed to meet diverse industry needs with reliability, efficiency, and innovation.
+Navaka Pumps India offers a comprehensive range of industrial and agricultural equipment, specializing in high-quality pumps and machinery. Our product portfolio is designed to meet diverse industry needs with reliability, efficiency, and innovation.
 
 #### [CRI Industrial Pumps]({{ site.baseurl }}/products/cri-industrial-pumps)
 Advanced pumping solutions for various industrial applications, including water treatment, chemical processing, pharmaceuticals, and more. Our CRI pumps combine efficiency with durability for optimal performance.
