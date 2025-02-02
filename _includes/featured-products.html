@@ -4,10 +4,14 @@
   <div class="featured-products-grid">
     {% for product in site.data.featured_products %}
       <div class="product-card">
-        <img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
-        <h3>{{ product.name }}</h3>
-        <p>{{ product.description }}</p>
-        <a href="/products#{{ product.name | slugify }}" class="learn-more">Learn More</a>
+        <div class="image-container">
+          <img src="{{ site.baseurl }}{{ product.image }}" alt="{{ product.name }}">
+        </div>
+        <div class="content">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <a href="{{ site.baseurl }}/products#{{ product.name | slugify }}" class="learn-more">Learn More</a>
+        </div>
       </div>
     {% endfor %}
   </div>

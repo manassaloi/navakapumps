@@ -293,7 +293,7 @@ body {
       font-size: $font-size-small;
       text-decoration: none;
       
-      &[href="/products/"] {
+      &[href$="/products/"] {
         padding: 0.625rem 1.25rem !important;
         background: $color-white !important;
         color: $color-secondary !important;
