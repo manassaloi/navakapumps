@@ -279,6 +279,11 @@ body {
     font-size: $font-size-h4;
     font-weight: bold;
     color: $color-secondary;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: none;
+    }
   }
   
   .site-nav {
