@@ -1,6 +1,7 @@
 ---
 layout: productpage
 title: Roto Pumps
+permalink: /products/roto-pumps/
 ---
 
 ## Roto Pumps - Navaka India

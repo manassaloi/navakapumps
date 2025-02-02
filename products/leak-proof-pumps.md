@@ -1,6 +1,7 @@
 ---
 layout: productpage
 title: Leak Proof Pumps
+permalink: /products/leak-proof-pumps/
 ---
 
 ## Leak Proof Pumps - Navaka India

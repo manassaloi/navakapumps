@@ -1,6 +1,7 @@
 ---
 layout: productpage
 title: Agricultural Machine
+permalink: /products/agricultural-machine/
 ---
 
 ## Rice Milling Machine - Navaka India

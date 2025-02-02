@@ -1,6 +1,7 @@
 ---
 layout: productpage
 title: CRI Industrial Pumps
+permalink: /products/cri-industrial-pumps/
 ---
 
 ## CRI Industrial Pumps - Navaka India

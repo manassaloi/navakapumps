@@ -1,6 +1,7 @@
 ---
 layout: productpage
-title: Rotodel Pumps
+title: Rotodel Hose Pumps
+permalink: /products/rotodel-pumps/
 ---
 
 ## Rotodel Hose Pumps - Navaka India
