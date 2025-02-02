@@ -104,9 +104,10 @@ $a-color: #2B2B2B;
     }
   }
 
-  .active a {
-    background-color: #007bff;
-    color: white;
+  .active a, a.active {
+    background-color: #FFB800;
+    color: #2B2B2B;
+    font-weight: 500;
   }
 }
 
