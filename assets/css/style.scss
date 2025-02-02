@@ -3,6 +3,53 @@
 ---
 @charset "utf-8";
 
+// Typography
+$font-primary: "Helvetica Neue", Arial, sans-serif;
+$font-size-h1: 3rem;      // 48px
+$font-size-h2: 2rem;      // 32px
+$font-size-h3: 1.5rem;    // 24px
+$font-size-h4: 1.25rem;   // 20px
+$font-size-body: 1rem;    // 16px
+$font-size-small: 0.875rem; // 14px
+
+// Variables and base styles
+$base-font-family: $font-primary !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$spacing-unit:     30px !default;
+
+// Brand Colors
+$color-primary: #1E3D6B;    // Navaka Blue
+$color-secondary: #2B2B2B;   // Industrial Gray - Main text on light bg
+$color-accent: #FFB800;      // Accent Yellow
+$color-background: #F5F5F5;  // Light Gray - Text on dark bg
+$color-success: #28A745;     // Success Green
+$color-error: #DC3545;       // Alert Red
+$color-info: #17A2B8;        // Info Blue
+
+// Common Colors
+$color-white: #FFFFFF;
+$color-border: rgba(229, 231, 235, 0.5);
+$color-shadow: rgba(0, 0, 0, 0.05);
+
+// Base Spacing Scale
+$space-1: 0.25rem;   // 4px  (xs)
+$space-2: 0.5rem;    // 8px  (sm)
+$space-3: 0.75rem;   // 12px
+$space-4: 1rem;      // 16px (md)
+$space-6: 1.5rem;    // 24px (lg)
+$space-8: 2rem;      // 32px (xl)
+$space-10: 2.5rem;   // 40px
+$space-12: 3rem;     // 48px (2xl)
+
+// Container Widths
+$container-max: 1152px;    // max-w-6xl
+$container-content: 768px; // max-w-3xl
+
+// Add this before @import "minima"
+$a-color: #2B2B2B;
+
+
 // Breakpoint System
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
@@ -93,256 +140,13 @@ $breakpoint-large: 1200px;
   }
 }
 
-// Brand Colors
-$color-primary: #1E3D6B;    // Navaka Blue
-$color-secondary: #2B2B2B;   // Industrial Gray - Main text on light bg
-$color-accent: #FFB800;      // Accent Yellow
-$color-background: #F5F5F5;  // Light Gray - Text on dark bg
-$color-success: #28A745;     // Success Green
-$color-error: #DC3545;       // Alert Red
-$color-info: #17A2B8;        // Info Blue
-
-// Typography
-$font-primary: "Helvetica Neue", Arial, sans-serif;
-$font-size-h1: 3rem;      // 48px
-$font-size-h2: 2rem;      // 32px
-$font-size-h3: 1.5rem;    // 24px
-$font-size-h4: 1.25rem;   // 20px
-$font-size-body: 1rem;    // 16px
-$font-size-small: 0.875rem; // 14px
-
-// Common Colors
-$color-white: #FFFFFF;
-$color-border: rgba(229, 231, 235, 0.5);
-$color-shadow: rgba(0, 0, 0, 0.05);
-
-// Base Spacing Scale
-$space-1: 0.25rem;   // 4px  (xs)
-$space-2: 0.5rem;    // 8px  (sm)
-$space-3: 0.75rem;   // 12px
-$space-4: 1rem;      // 16px (md)
-$space-6: 1.5rem;    // 24px (lg)
-$space-8: 2rem;      // 32px (xl)
-$space-10: 2.5rem;   // 40px
-$space-12: 3rem;     // 48px (2xl)
-
-// Container Widths
-$container-max: 1152px;    // max-w-6xl
-$container-content: 768px; // max-w-3xl
-
-// Add this before @import "minima"
-$a-color: #2B2B2B;
-
-// First import minima with default variables
+// Import minima theme
 @import "minima";
 
-// Product Layout Styles
-.product-container {
-  @extend .container;
-  display: flex;
-  flex-direction: column;
-  gap: $space-4;
-  margin: 0 auto;
-  padding: $space-4;
-  box-sizing: border-box;
-  
-  @include tablet-up {
-    flex-direction: row;
-    gap: $space-6;
-    padding: $space-6;
-  }
-  
-  @include desktop-up {
-    gap: $space-8;
-    padding: $space-8;
-  }
-}
-
-.product-sidebar {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  
-  @include tablet-up {
-    flex: 0 0 250px;
-  }
-  
-  @include desktop-up {
-    flex: 0 0 300px;
-  }
-}
-
-.product-content {
-  width: 100%;
-  min-width: 0;
-  
-  @include tablet-up {
-    flex: 1;
-    max-width: calc(100% - 250px - #{$space-6});
-  }
-  
-  @include desktop-up {
-    max-width: calc(100% - 300px - #{$space-8});
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: $space-4;
-  }
-}
-
-.product-nav {
-  position: relative;
-  width: 100%;
-  margin-bottom: $space-4;
-  
-  @include tablet-up {
-    position: sticky;
-    top: 2rem;
-    margin-bottom: 0;
-  }
-  
-  h3 {
-    margin-top: 0;
-    padding-bottom: $space-2;
-    border-bottom: 1px solid $color-border;
-    font-size: $font-size-h4;
-    color: $color-secondary;
-  }
-}
-
-.product-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-  li {
-    margin-bottom: $space-2;
-  }
-  
-  a {
-    display: block;
-    padding: $space-2;
-    color: $color-secondary;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    
-    &:hover {
-      background: $color-background;
-      text-decoration: none;
-    }
-  }
-  
-  .active a, a.active {
-    background: $color-accent;
-    color: $color-secondary;
-    font-weight: 500;
-  }
-}
-
-// Footer Section
-.footer {
-  @extend .container;
-  background: $color-white;
-  border-top: 1px solid $color-border;
-  padding-top: $space-6;
-  padding-bottom: $space-6;
-  font-size: $font-size-small;
-  width: 100%;
-  box-sizing: border-box;
-  
-  @include tablet-up {
-    padding-top: $space-8;
-    padding-bottom: $space-8;
-  }
-  
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $space-4;
-    margin-bottom: $space-6;
-    
-    @include tablet-up {
-      grid-template-columns: repeat(2, 1fr);
-      gap: $space-6;
-    }
-    
-    @include desktop-up {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  &__column {
-    text-align: center;
-    
-    @include tablet-up {
-      text-align: left;
-    }
-  }
-  
-  &__heading {
-    font-size: $font-size-body;
-    font-weight: 600;
-    color: $color-secondary;
-    margin-bottom: $space-3;
-    
-    @include tablet-up {
-      margin-bottom: $space-4;
-    }
-  }
-  
-  &__text {
-    font-size: $font-size-small;
-    color: $color-secondary;
-    line-height: 1.6;
-    margin-bottom: $space-2;
-  }
-  
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    
-    @include tablet-up {
-      text-align: left;
-    }
-  }
-  
-  &__list-item {
-    font-size: $font-size-small;
-    color: $color-secondary;
-    margin-bottom: $space-2;
-    
-    a {
-      color: $color-secondary;
-      text-decoration: none;
-      transition: color 0.2s;
-      
-      &:hover {
-        color: $color-primary;
-      }
-    }
-  }
-  
-  &__copyright {
-    text-align: center;
-    padding-top: $space-4;
-    margin-top: $space-4;
-    border-top: 1px solid $color-border;
-    
-    .footer__text {
-      color: $color-secondary;
-      margin-bottom: 0;
-      font-size: $font-size-small;
-    }
-  }
-}
-
-// Then import custom styles
+// Override with our custom styles
 @import "custom/home";
+@import "custom/footer";
+@import "custom/base";
 
 body {
   font-family: $font-primary;
@@ -353,40 +157,27 @@ body {
 
 // Header styles
 .site-header {
-  width: 100%;
-  padding: $space-2 0;
+  border-top: 0;
   border-bottom: 1px solid $color-border;
-  background: $color-white;
-  box-sizing: border-box;
+  min-height: auto;
+  padding: $space-4 0;  // Increased vertical padding
   
   .wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: $space-4;
-    width: 100%;
-    padding: 0 $space-4;
-    
-    @include tablet-up {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 $space-6;
-      gap: $space-6;
-    }
-    
-    @include desktop-up {
-      max-width: $container-max;
-      padding: 0 $space-8;
-    }
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $space-8;  // Increased horizontal padding
+    max-width: $container-max;
+    margin: 0 auto;
   }
   
   .site-title {
     font-size: $font-size-h4;
-    font-weight: bold;
+    font-weight: 600;
     color: $color-secondary;
     text-decoration: none;
-    margin: 0;
+    float: none;
+    padding-left: $space-4;  // Added left padding
     
     &:hover {
       text-decoration: none;
@@ -394,47 +185,29 @@ body {
   }
   
   .site-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: $space-2;
-    
-    @include tablet-up {
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      width: auto;
-      gap: $space-4;
-    }
+    float: right;
+    line-height: normal;
+    position: static;
+    border: none;
+    padding: 0;
+    background: none;
+    margin-right: $space-4;  // Added right margin
     
     .page-link {
-      display: block;
-      width: 100%;
-      padding: $space-2;
-      color: $color-secondary;
-      font-weight: 500;
       font-size: $font-size-small;
-      text-decoration: none;
-      
-      @include tablet-up {
-        width: auto;
-        margin-left: $space-4;
-      }
+      font-weight: 500;
+      color: $color-secondary;
+      margin-left: $space-12;  // Increased space between nav items
+      line-height: normal;
       
       &[href$="/products/"] {
-        padding: $space-2 $space-4;
-        background: $color-white;
-        color: $color-secondary;
+        padding: $space-3 $space-6;  // Increased button padding
         border: 1px solid $color-secondary;
         border-radius: 6px;
-        transition: all 0.2s;
-        text-align: center;
         
         &:hover {
           background: $color-background;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba($color-secondary, 0.1);
+          text-decoration: none;
         }
       }
     }
@@ -621,78 +394,48 @@ body {
 // Features Grid Section
 .features-grid {
   @include features-grid;
-  @extend .container;
-  padding-top: $space-6;
-  padding-bottom: $space-6;
+  padding: $space-8 0;
   background: $color-white;
-  box-sizing: border-box;
   
   @include tablet-up {
-    padding-top: $space-8;
-    padding-bottom: $space-8;
-  }
-  
-  @include desktop-up {
-    padding-top: $space-10;
-    padding-bottom: $space-10;
+    padding: $space-10 0;
   }
   
   .feature-card {
     background: $color-white;
-    padding: $space-4;
+    padding: $space-6;
     border-radius: 8px;
     border: 1px solid $color-border;
     box-shadow: 0 1px 2px $color-shadow;
-    width: 100%;
-    box-sizing: border-box;
-    
-    @include tablet-up {
-      padding: $space-6;
-    }
     
     .feature-icon {
-      width: 40px;
-      height: 40px;
-      margin-bottom: $space-3;
+      width: 48px;
+      height: 48px;
+      margin-bottom: $space-4;
       display: flex;
       align-items: center;
       justify-content: center;
       
-      @include tablet-up {
-        width: 48px;
-        height: 48px;
-        margin-bottom: $space-4;
-      }
-      
-      svg, img {
+      svg {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        stroke: $color-secondary;
+        fill: none;
       }
     }
     
     h3 {
-      font-size: $font-size-body;
+      font-size: $font-size-h4;
       font-weight: 600;
       color: $color-secondary;
       margin-bottom: $space-2;
-      
-      @include tablet-up {
-        font-size: $font-size-h4;
-        margin-bottom: $space-3;
-      }
     }
     
     p {
-      font-size: $font-size-small;
+      font-size: $font-size-body;
       color: $color-secondary;
-      line-height: 1.4;
+      line-height: 1.5;
       margin: 0;
-      
-      @include tablet-up {
-        font-size: $font-size-body;
-        line-height: 1.5;
-      }
     }
   }
 }
@@ -700,47 +443,23 @@ body {
 // Featured Products Section
 .featured-products {
   @extend .container;
-  padding-top: $space-6;
-  padding-bottom: $space-6;
+  padding: $space-12 0;
   text-align: center;
-  background: linear-gradient(to bottom, $color-white, $color-background);
-  
-  @include tablet-up {
-    padding-top: $space-8;
-    padding-bottom: $space-8;
-  }
-  
-  @include desktop-up {
-    padding-top: $space-10;
-    padding-bottom: $space-10;
-  }
   
   .section-title {
-    font-size: $font-size-h3;
-    font-weight: bold;
+    font-size: $font-size-h2;
+    font-weight: 600;
     color: $color-secondary;
     margin-bottom: $space-3;
-    letter-spacing: -0.02em;
-    
-    @include tablet-up {
-      font-size: $font-size-h2;
-      margin-bottom: $space-4;
-    }
   }
   
   .section-subtitle {
     font-size: $font-size-body;
     color: $color-secondary;
-    margin-bottom: $space-6;
-    padding: 0 $space-4;
-    line-height: 1.6;
-    
-    @include tablet-up {
-      max-width: $container-content;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0;
-    }
+    margin-bottom: $space-8;
+    max-width: $container-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -750,74 +469,80 @@ body {
   .product-card {
     background: $color-white;
     border: 1px solid $color-border;
-    border-radius: 8px;
-    padding: $space-4;
-    box-shadow: 0 1px 2px $color-shadow;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px $color-shadow;
     
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba($color-secondary, 0.1);
+      box-shadow: 0 12px 24px rgba($color-secondary, 0.12);
     }
     
     .image-container {
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      border-radius: 4px;
-      margin: -$space-2 -$space-2 $space-4;
-      background: $color-background;
+      width: 100%;
+      padding-top: 75%;
+      position: relative;
+      background: linear-gradient(45deg, darken($color-accent, 5%), $color-accent);
+      border-bottom: 1px solid rgba($color-secondary, 0.1);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: $space-4;
+        left: $space-4;
+        right: $space-4;
+        bottom: $space-4;
+        border: 1px solid rgba($color-white, 0.2);
+        border-radius: 8px;
+      }
       
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        position: absolute;
+        top: $space-6;
+        left: $space-6;
+        right: $space-6;
+        bottom: $space-6;
+        width: calc(100% - #{$space-6 * 2});
+        height: calc(100% - #{$space-6 * 2});
+        object-fit: contain;
+        object-position: center;
       }
     }
     
-    h3 {
-      font-size: $font-size-body;
-      font-weight: 600;
-      color: $color-secondary;
-      margin-bottom: $space-2;
-      
-      @include tablet-up {
-        font-size: $font-size-h4;
-      }
-    }
-    
-    p {
-      font-size: $font-size-small;
-      color: $color-secondary;
-      margin-bottom: $space-4;
-      line-height: 1.5;
-      
-      @include tablet-up {
-        font-size: $font-size-body;
-      }
-    }
-    
-    .learn-more {
-      display: inline-block;
-      padding: $space-2 $space-4;
-      background: $color-white;
-      color: $color-secondary;
-      border: 1px solid $color-secondary;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: $font-size-small;
-      font-weight: 500;
-      transition: all 0.2s;
-      width: 100%;
+    .content {
+      padding: $space-6;
       text-align: center;
       
-      @include tablet-up {
-        width: auto;
+      h3 {
+        font-size: $font-size-h4;
+        font-weight: 600;
+        color: $color-secondary;
+        margin-bottom: $space-2;
       }
       
-      &:hover {
-        background: $color-background;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba($color-secondary, 0.1);
+      p {
+        font-size: $font-size-body;
+        color: $color-secondary;
+        margin-bottom: $space-6;
+        line-height: 1.6;
+      }
+      
+      .learn-more {
+        display: inline-block;
+        padding: $space-2 $space-6;
+        border: 1px solid $color-secondary;
+        border-radius: 6px;
+        color: $color-secondary;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s;
+        
+        &:hover {
+          background: $color-background;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba($color-secondary, 0.1);
+        }
       }
     }
   }
