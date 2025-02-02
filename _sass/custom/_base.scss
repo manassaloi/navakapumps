@@ -1,1 +1,21 @@
- 
+// Override default link colors
+a {
+  color: #2B2B2B;  // Industrial Gray - same as body text
+  text-decoration: none;
+  transition: all 0.2s ease;
+  
+  &:visited {
+    color: #2B2B2B;  // Keep same color for visited links
+  }
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Keep hero buttons with their special styling
+.hero-buttons .button {
+  &, &:visited {
+    color: inherit;  // Use color defined in hero button styles
+  }
+} 
