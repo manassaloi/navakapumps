@@ -14,7 +14,7 @@ Advanced pumping solutions for various industrial applications, including water 
 #### [Leak Proof Pumps]({{ site.baseurl }}/products/leak-proof-pumps)
 Specialized pumps designed for handling corrosive fluids and demanding industrial applications. Available in multiple series including PPE, RD, PPM, and VPP, offering solutions for different operational needs.
 
-#### [Roto Pumps]({{ site.baseurl }}/products/roto-pumps)
+#### [PC Pumps]({{ site.baseurl }}/products/pc-pumps)
 High-performance pumps available in various configurations including horizontal external bearing, vertical, and positive displacement pumps. Ideal for industries ranging from oil & gas to food & beverage.
 
 #### [Rotodel Hose Pumps]({{ site.baseurl }}/products/rotodel-pumps)

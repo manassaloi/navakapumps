@@ -4,7 +4,7 @@ title: About us
 permalink: /aboutus/
 ---
 
-Established in 2016 in Pump City, Coimbatore, Tamil Nadu, India, Navaka India is a trusted supplier of a wide range of industrial pumps. We are the authorized dealer for Roto Screw Pumps, CRI Industrial Range of Centrifugal Pumps, Rotodel Gear Pumps, and Leakproof Chemical Centrifugal Pumps.
+Established in 2016 in Pump City, Coimbatore, Tamil Nadu, India, Navaka India is a trusted supplier of a wide range of industrial pumps. We are the authorized dealer for PC Pumps, CRI Industrial Range of Centrifugal Pumps, Rotodel Gear Pumps, and Leakproof Chemical Centrifugal Pumps.
 
 Navaka India has built a strong reputation as a reliable trading house and exporter of various industrial products. We provide comprehensive pumping solutions to both domestic and international clients, serving as a single-source provider for diverse types of pumps. We specialize in supplying all necessary pumps for specific projects, ensuring seamless project execution.
 
