@@ -407,6 +407,10 @@ label[for="nav-trigger"] {
       background-position: center;
       background-repeat: no-repeat;
       z-index: 1;
+      will-change: transform;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
     }
   }
   
