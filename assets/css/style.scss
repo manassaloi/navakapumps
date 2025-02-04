@@ -292,182 +292,145 @@ label[for="nav-trigger"] {
 
 // Hero section
 .hero-section {
-  @extend .container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $space-6;
-  align-items: center;
+  position: relative;
   background: #F9FAFB;
-  padding-top: $space-6;
-  padding-bottom: $space-6;
-  box-sizing: border-box;
+  padding: $space-6 0;
   overflow: hidden;
   
   @include tablet-up {
-    grid-template-columns: 1fr 1fr;
-    padding-top: $space-8;
-    padding-bottom: $space-8;
-    min-height: 400px;
+    padding: $space-8 0;
   }
+}
+
+.hero-container {
+  @extend .container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-4;
+  align-items: center;
   
-  @include desktop-up {
+  @include tablet-up {
     grid-template-columns: 55% 45%;
-    padding-top: $space-10;
-    padding-bottom: $space-10;
-    min-height: 450px;
+    gap: 0;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  text-align: center;
+  z-index: 2;
+  
+  @include tablet-up {
+    text-align: left;
+    padding-right: $space-8;
+    gap: $space-6;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.hero-title {
+  font-size: $font-size-h2;
+  font-weight: bold;
+  line-height: 1.2;
+  color: $color-secondary;
+  margin: 0;
+  
+  @include tablet-up {
+    font-size: $font-size-h1;
+  }
+}
+
+.hero-subtitle {
+  font-size: $font-size-body;
+  color: $color-secondary;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+  
+  @include tablet-up {
+    font-size: $font-size-h4;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  
+  @include tablet-up {
+    flex-direction: row;
+    gap: $space-4;
   }
   
-  .hero-content {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    
-    @include tablet-up {
-      text-align: left;
-      padding-right: $space-6;
-      max-width: 100%;
-    }
-  }
-  
-  .hero-title {
-    font-size: $font-size-h3;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: $space-3;
-    color: $color-secondary;
-    position: relative;
-    
-    @include tablet-up {
-      font-size: $font-size-h2;
-      line-height: 1.1;
-    }
-    
-    @include desktop-up {
-      font-size: 2.5rem;
-    }
-    
-    &::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: $color-accent;
-      margin-top: $space-3;
-      margin-left: auto;
-      margin-right: auto;
-      
-      @include tablet-up {
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-  }
-  
-  .hero-subtitle {
+  .button {
+    padding: $space-3 $space-6;
+    border-radius: 6px;
+    font-weight: 500;
     font-size: $font-size-body;
-    color: $color-secondary;
-    margin-bottom: $space-4;
-    line-height: 1.5;
-    max-width: 100%;
-    padding: 0 $space-4;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
     
-    @include tablet-up {
-      padding: 0;
-      max-width: 90%;
+    &.primary {
+      background: $color-white;
+      color: $color-secondary;
+      border: 1px solid $color-secondary;
+      
+      &:hover {
+        background: $color-background;
+        transform: translateY(-2px);
+      }
+    }
+    
+    &.secondary {
+      background: $color-accent;
+      color: $color-secondary;
+      border: none;
+      
+      &:hover {
+        background: darken($color-accent, 5%);
+        transform: translateY(-2px);
+      }
     }
   }
+}
+
+.hero-image {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  margin: 0;
+  order: -1;
   
-  .hero-image {
-    position: relative;
-    height: 200px;
+  @include tablet-up {
+    height: 400px;
+    order: 2;
+    margin-left: -5%;
+    transform: translateX(20px);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0;
-    order: -1;
-    
-    @include tablet-up {
-      height: 300px;
-      order: 2;
-      margin-left: -5%;
-    }
-    
-    @include desktop-up {
-      height: 400px;
-    }
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('/assets/img/navakahomebanner.png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 1;
-      will-change: transform;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-font-smoothing: subpixel-antialiased;
-    }
-  }
-  
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: $space-3;
-    align-items: center;
-    margin-top: $space-4;
-    padding: 0 $space-4;
-    
-    @include tablet-up {
-      flex-direction: row;
-      justify-content: flex-start;
-      padding: 0;
-      gap: $space-4;
-    }
-    
-    .button {
-      width: 100%;
-      max-width: 300px;
-      padding: $space-3 $space-4;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: $font-size-body;
-      transition: all 0.2s;
-      text-decoration: none;
-      text-align: center;
-      
-      @include tablet-up {
-        width: auto;
-      }
-      
-      &.primary {
-        background: $color-white;
-        color: $color-secondary;
-        border: 1px solid $color-secondary;
-        
-        &:hover {
-          background: $color-background;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba($color-secondary, 0.1);
-        }
-      }
-      
-      &.secondary {
-        background: $color-accent;
-        color: $color-secondary;
-        border: none;
-        
-        &:hover {
-          background: darken($color-accent, 10%);
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba($color-accent, 0.2);
-        }
-      }
-    }
+    height: 100%;
+    background-image: url('/assets/img/navakahomebanner.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
 
