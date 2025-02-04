@@ -183,8 +183,9 @@ body {
     float: none;
     padding-left: $space-4;
     
-    &:hover {
+    &:hover, &:visited, &:active, &:focus {
       text-decoration: none;
+      color: $color-secondary;
     }
 
     @include mobile-only {
@@ -205,6 +206,12 @@ body {
         color: $color-secondary;
         margin-left: $space-8;
         line-height: normal;
+        text-decoration: none;
+        
+        &:hover, &:visited, &:active, &:focus {
+          text-decoration: none;
+          color: $color-secondary;
+        }
         
         &[href$="/products/"] {
           padding: $space-3 $space-6;
