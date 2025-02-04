@@ -342,6 +342,28 @@ label[for="nav-trigger"] {
   color: $color-secondary;
   margin: 0;
   
+  .emphasis {
+    color: $color-primary;
+    font-weight: 800;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $color-accent;
+    }
+  }
+  
+  .engineered {
+    display: inline-block;
+    color: $color-secondary;
+    opacity: 0.9;
+  }
+  
   @include tablet-up {
     font-size: $font-size-h1;
   }
