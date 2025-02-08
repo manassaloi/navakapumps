@@ -5,7 +5,18 @@
     {% for product in site.data.featured_products %}
       <div class="product-card">
         <div class="image-container">
-          <img loading="lazy" src="{{ site.baseurl }}{{ product.image }}" alt="{{ product.name }}">
+          <picture>
+            <source 
+              srcset="{{ site.baseurl }}{{ product.image | replace: '.jpg', '.webp' }}"
+              type="image/webp">
+            <img 
+              loading="lazy" 
+              src="{{ site.baseurl }}{{ product.image }}" 
+              alt="{{ product.name }}"
+              width="400"
+              height="300"
+              decoding="async">
+          </picture>
         </div>
         <div class="content">
           <h3>{{ product.name }}</h3>

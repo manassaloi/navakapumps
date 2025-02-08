@@ -439,16 +439,25 @@ body {
   }
 }
 
-.hero-image {
+.hero-image-wrapper {
   position: relative;
-  height: 250px;
   width: 100%;
-  margin: 0;
+  height: 250px;
+  overflow: hidden;
   order: -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   
+  @include tablet-up {
+    height: 400px;
+    order: 2;
+    margin-left: -5%;
+    transform: translateX(20px);
+  }
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+
   img {
     width: 100%;
     height: 100%;
@@ -458,13 +467,6 @@ body {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
-  }
-  
-  @include tablet-up {
-    height: 400px;
-    order: 2;
-    margin-left: -5%;
-    transform: translateX(20px);
   }
 }
 

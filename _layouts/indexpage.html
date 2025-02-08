@@ -3,7 +3,6 @@ layout: default
 ---
 {% comment %}Preload hero image{% endcomment %}
 <link rel="preload" href="{{ site.baseurl }}/assets/img/navakahomebanner.webp" as="image" type="image/webp" fetchpriority="high">
-<link rel="preload" href="{{ site.baseurl }}/assets/img/navakahomebanner.png" as="image" type="image/png" fetchpriority="high">
 
 <section class="hero-section">
   <div class="hero-container">
@@ -20,11 +19,25 @@ layout: default
         <a href="{{ site.baseurl }}/contact" class="button secondary">Contact Sales</a>
       </div>
     </div>
-    <picture class="hero-image" role="img" aria-label="Navaka Pumps Banner Image">
-      <source srcset="{{ site.baseurl }}/assets/img/navakahomebanner.webp" type="image/webp">
-      <source srcset="{{ site.baseurl }}/assets/img/navakahomebanner.png" type="image/png">
-      <img src="{{ site.baseurl }}/assets/img/navakahomebanner.png" alt="Navaka Pumps Banner" loading="eager" decoding="async">
-    </picture>
+    <div class="hero-image-wrapper">
+      <picture class="hero-image" role="img" aria-label="Navaka Pumps Banner Image">
+        <source 
+          srcset="{{ site.baseurl }}/assets/img/navakahomebanner.webp 1028w,
+                  {{ site.baseurl }}/assets/img/navakahomebanner-800.webp 800w,
+                  {{ site.baseurl }}/assets/img/navakahomebanner-500.webp 500w"
+          sizes="(max-width: 500px) 100vw,
+                 (max-width: 800px) 800px,
+                 1028px"
+          type="image/webp">
+        <img 
+          src="{{ site.baseurl }}/assets/img/navakahomebanner.webp" 
+          alt="Navaka Pumps Banner" 
+          loading="eager" 
+          decoding="async"
+          width="1028"
+          height="1220">
+      </picture>
+    </div>
   </div>
 </section>
 
