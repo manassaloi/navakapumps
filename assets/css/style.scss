@@ -4,7 +4,8 @@
 @charset "utf-8";
 
 // Typography
-$font-primary: "Helvetica Neue", Arial, sans-serif;
+$font-heading: "PT Serif Caption", serif;
+$font-body: "Noto Sans JP", sans-serif;
 $font-size-h1: 3rem;      // 48px
 $font-size-h2: 2rem;      // 32px
 $font-size-h3: 1.5rem;    // 24px
@@ -13,7 +14,7 @@ $font-size-body: 1rem;    // 16px
 $font-size-small: 0.875rem; // 14px
 
 // Variables and base styles
-$base-font-family: $font-primary !default;
+$base-font-family: $font-body !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $spacing-unit:     30px !default;
@@ -149,10 +150,18 @@ $breakpoint-large: 1200px;
 @import "custom/base";
 
 body {
-  font-family: $font-primary;
+  font-family: $font-body;
   font-size: $font-size-body;
   line-height: 1.5;
   color: $color-secondary;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.products-sidebar h2,
+.section-title,
+.page-heading {
+  font-family: $font-heading;
 }
 
 // Header styles
