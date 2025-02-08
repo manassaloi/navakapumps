@@ -445,14 +445,20 @@ body {
   width: 100%;
   margin: 0;
   order: -1;
-  background-image: url('/assets/img/navakahomebanner.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
   
   @include tablet-up {
     height: 400px;
