@@ -445,29 +445,20 @@ body {
   width: 100%;
   margin: 0;
   order: -1;
+  background-image: url('/assets/img/navakahomebanner.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
   
   @include tablet-up {
     height: 400px;
     order: 2;
     margin-left: -5%;
     transform: translateX(20px);
-  }
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/img/navakahomebanner.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
 

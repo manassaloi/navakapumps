@@ -5,7 +5,7 @@
     {% for product in site.data.featured_products %}
       <div class="product-card">
         <div class="image-container">
-          <img src="{{ site.baseurl }}{{ product.image }}" alt="{{ product.name }}">
+          <img loading="lazy" src="{{ site.baseurl }}{{ product.image }}" alt="{{ product.name }}">
         </div>
         <div class="content">
           <h3>{{ product.name }}</h3>

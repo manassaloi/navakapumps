@@ -2,7 +2,7 @@
 layout: default
 ---
 {% comment %}Preload hero image{% endcomment %}
-<link rel="preload" href="{{ site.baseurl }}/assets/img/navakahomebanner.png" as="image" type="image/png">
+<link rel="preload" href="{{ site.baseurl }}/assets/img/navakahomebanner.png" as="image" type="image/png" fetchpriority="high">
 
 <section class="hero-section">
   <div class="hero-container">
@@ -19,7 +19,7 @@ layout: default
         <a href="{{ site.baseurl }}/contact" class="button secondary">Contact Sales</a>
       </div>
     </div>
-    <div class="hero-image"></div>
+    <div class="hero-image" role="img" aria-label="Navaka Pumps Banner Image"></div>
   </div>
 </section>
 
