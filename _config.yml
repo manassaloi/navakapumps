@@ -17,7 +17,8 @@ title: Navaka Pumps
 # email: your-email@example.com
 description: Navaka, based in Coimbatore, India, is a reputed trading house and exporter of various industrial products. We provide pumping solutions to both domestic and international clients. We strive to render industrial products that are known for their reliability, quality, efficiency and standards. Our range mainly includes industrial pumps, flexible hose, strainers, filters, etc.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://navakapumps.com" # the base hostname & protocol for your site
+enforce_ssl: navakapumps.com   # force HTTPS
 
 defaults:
   - scope:
