@@ -162,11 +162,12 @@ body {
   min-height: auto;
   padding: $space-4 0;
   background: $color-white;
+  position: relative;
   
   .wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: $container-max;
     margin: 0 auto;
     padding: 0 $space-4;
@@ -180,6 +181,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  padding-right: $space-4;
   
   &:hover, &:visited, &:active, &:focus {
     text-decoration: none;
@@ -255,18 +257,14 @@ body {
   
   @include tablet-up {
     position: static;
-    float: right;
+    float: none;
     border: none;
     background-color: transparent;
     padding: 0;
     display: flex;
     align-items: center;
-    gap: $space-6;
+    margin-left: auto;
     
-    @include desktop-up {
-      gap: $space-8;
-    }
-
     .menu-icon {
       display: none;
     }
@@ -274,22 +272,26 @@ body {
     input ~ .trigger {
       display: flex;
       align-items: center;
-      gap: inherit;
+      gap: $space-6;
     }
 
     .page-link {
       display: inline-flex;
       align-items: center;
-      padding: $space-2 0;
+      padding: $space-2 $space-4;
       font-size: $font-size-body;
       font-weight: 500;
       margin: 0;
       white-space: nowrap;
       
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      
       &[href$="/products/"] {
         font-weight: 600;
         margin-top: 0;
-        padding: $space-2 $space-6;
+        padding: $space-2 $space-4;
         text-align: left;
         
         &:hover {
