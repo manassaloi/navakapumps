@@ -454,6 +454,7 @@ h1, h2, h3, h4, h5, h6,
   position: relative;
   width: 100%;
   height: 250px;
+  border-radius: 12px;
   overflow: hidden;
   order: -1;
   
@@ -468,16 +469,14 @@ h1, h2, h3, h4, h5, h6,
 .hero-image {
   width: 100%;
   height: 100%;
+  border-radius: inherit;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
+    border-radius: inherit;
   }
 }
 
