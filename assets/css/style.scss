@@ -764,24 +764,24 @@ h4, .feature-card h3 {
 
 // CTA Section
 .cta-section {
-  padding: $space-10 $space-6; // 40px vertical, 24px horizontal
+  padding: $space-10 $space-6;
   text-align: center;
   background: $color-secondary;
   border-radius: 8px;
-  margin: $space-8 auto; // 32px vertical margins
-  max-width: $container-max;
+  margin: $space-8 auto;
+  max-width: $container-content;
   
   .section-title {
     font-size: $font-size-h2;
     font-weight: bold;
     color: $color-background;
-    margin-bottom: $space-3; // 12px
+    margin-bottom: $space-3;
   }
   
   .section-subtitle {
     font-size: $font-size-body;
     color: $color-background;
-    margin-bottom: $space-6; // 24px
+    margin-bottom: $space-6;
   }
   
   .cta-button {
@@ -801,6 +801,15 @@ h4, .feature-card h3 {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba($color-accent, 0.2);
       }
+    }
+  }
+  
+  @include mobile-only {
+    margin: $space-6 $space-4;
+    padding: $space-8 $space-4;
+    
+    .section-title {
+      font-size: $font-size-h3;
     }
   }
 }
