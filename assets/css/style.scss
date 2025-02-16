@@ -507,12 +507,12 @@ h4, .feature-card h3 {
   border-radius: 12px;
   overflow: hidden;
   order: -1;
+  margin-left: 0;
   
   @include tablet-up {
     height: 400px;
     order: 2;
     margin-left: -5%;
-    transform: translateX(20px);
   }
 }
 
