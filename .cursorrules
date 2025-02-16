@@ -52,7 +52,7 @@ List of rules and guidelines for this project.
 4. CSS Rules
 	1.	Organization
 	•	Keep CSS rules logically grouped (e.g., layout, typography, components).
-	•	Maintain a clean style.css file if overriding Minima’s styles.
+	•	Maintain a clean style.css file if overriding Minima's styles.
 	2.	Flexbox and Grid
 	•	Use modern layout techniques like Flexbox and Grid.
 	•	Avoid outdated properties like float for layout.
@@ -60,6 +60,32 @@ List of rules and guidelines for this project.
 	•	Provide fallbacks for properties not supported by older browsers.
 	4.	Resources
 	•	CSS Documentation (MDN)
+	5.	CSS Structure and Hierarchy
+	•	Main Entry Point:
+		- assets/css/style.scss: Primary stylesheet that imports all other styles
+	•	Theme Files Location:
+		- _sass/minima.scss: Core theme variables and imports
+		- _sass/minima/_base.scss: Base element styles
+		- _sass/minima/_layout.scss: Layout component styles
+		- _sass/minima/_syntax-highlighting.scss: Code styles
+	•	Custom Overrides Location:
+		- _sass/custom/_home.scss: Home page styles
+		- _sass/custom/_footer.scss: Footer styles
+		- _sass/custom/_base.scss: Base style overrides
+	•	Loading Order:
+		1. Minima variables (_sass/minima.scss)
+		2. Minima base styles
+		3. Our variables (assets/css/style.scss)
+		4. Our custom styles
+	•	Debugging Tips:
+		- For colors/variables: Check _sass/minima.scss first
+		- For layout components: Check _sass/minima/_layout.scss
+		- For base elements: Check _sass/minima/_base.scss
+		- For custom overrides: Check _sass/custom/
+	•	Common Issues:
+		- Variables with !default flag in Minima need to be defined before import
+		- Styles might exist in both Minima and custom files
+		- Some styles come from base element styling in _base.scss
 
 5. JavaScript Rules
 	1.	ES6 Syntax

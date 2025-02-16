@@ -6,21 +6,21 @@ layout: default
   <aside class="products-sidebar">
     <h2>Products</h2>
     <ul>
-      <li><a href="/products/cri-industrial-pumps" {% if page.url == '/products/cri-industrial-pumps' %}class="active"{% endif %}>CRI Industrial Pumps</a></li>
-      <li><a href="/products/leak-proof-pumps" {% if page.url == '/products/leak-proof-pumps' %}class="active"{% endif %}>Leak Proof Pumps</a></li>
-      <li><a href="/products/pc-pumps" {% if page.url == '/products/pc-pumps' %}class="active"{% endif %}>PC Pumps</a></li>
-      <li><a href="/products/rotodel-pumps" {% if page.url == '/products/rotodel-pumps' %}class="active"{% endif %}>Rotodel Pumps</a></li>
-      <li><a href="/products/agricultural-machine" {% if page.url == '/products/agricultural-machine' %}class="active"{% endif %}>Agricultural Machine</a></li>
+      <li><a href="{{ site.baseurl }}/products/cri-industrial-pumps" {% if page.url == '/products/cri-industrial-pumps' %}class="active"{% endif %}>CRI Industrial Pumps</a></li>
+      <li><a href="{{ site.baseurl }}/products/leak-proof-pumps" {% if page.url == '/products/leak-proof-pumps' %}class="active"{% endif %}>Leak Proof Pumps</a></li>
+      <li><a href="{{ site.baseurl }}/products/pc-pumps" {% if page.url == '/products/pc-pumps' %}class="active"{% endif %}>PC Pumps</a></li>
+      <li><a href="{{ site.baseurl }}/products/rotodel-pumps" {% if page.url == '/products/rotodel-pumps' %}class="active"{% endif %}>Rotodel Pumps</a></li>
+      <li><a href="{{ site.baseurl }}/products/agricultural-machine" {% if page.url == '/products/agricultural-machine' %}class="active"{% endif %}>Agricultural Machine</a></li>
     </ul>
   </aside>
 
   <!-- Main Content -->
-  <article class="product-content">
-    <header class="post-header">
+  <article class="products-content">
+    <header class="products-header">
       <h1 class="page-heading">{{ page.title }}</h1>
     </header>
 
-    <div class="post-content">
+    <div class="products-body">
       {{ content }}
     </div>
   </article>

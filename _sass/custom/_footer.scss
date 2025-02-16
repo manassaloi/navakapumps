@@ -1,7 +1,7 @@
 .footer {
   padding: 3.75rem 0 1.25rem;
-  background-color: #fff;
-  border-top: 1px solid #e8e8e8;
+  background-color: $color-background;
+  border-top: 1px solid $color-border;
 
   .container {
     max-width: 75rem;
@@ -29,11 +29,11 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.25rem;
-    color: #333;
+    color: $color-primary;
   }
 
   &__text {
-    color: #666;
+    color: rgba($color-primary, 0.85);
     line-height: 1.6;
     margin-bottom: 0.625rem;
     font-size: 1rem;
@@ -46,7 +46,7 @@
   }
 
   &__list-item {
-    color: #666;
+    color: rgba($color-primary, 0.85);
     margin-bottom: 0.625rem;
     font-size: 1rem;
   }
@@ -54,10 +54,10 @@
   &__copyright {
     text-align: center;
     padding-top: 1.25rem;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid $color-border;
 
     .footer__text {
-      color: #999;
+      color: rgba($color-primary, 0.7);
       font-size: 0.875rem;
       margin-bottom: 0;
     }

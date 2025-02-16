@@ -21,18 +21,18 @@ $base-line-height: 1.5 !default;
 $spacing-unit:     30px !default;
 
 // Brand Colors
-$color-primary: #1E3D6B;    // Navaka Blue
-$color-secondary: #2B2B2B;   // Industrial Gray - Main text on light bg
-$color-accent: #FFB800;      // Accent Yellow
-$color-background: #F5F5F5;  // Light Gray - Text on dark bg
+$color-primary: #d1cfc0;    // New primary text color
+$color-secondary: #d1cfc0;   // New secondary text color
+$color-accent: #FFB800;      // Keeping accent yellow
+$color-background: #1f1f1f;  // New dark background
 $color-success: #28A745;     // Success Green
 $color-error: #DC3545;       // Alert Red
 $color-info: #17A2B8;        // Info Blue
 
 // Common Colors
-$color-white: #FFFFFF;
-$color-border: rgba(229, 231, 235, 0.5);
-$color-shadow: rgba(0, 0, 0, 0.05);
+$color-white: #1f1f1f;       // Inverting for dark theme
+$color-border: rgba(209, 207, 192, 0.2);  // Adjusted for dark theme
+$color-shadow: rgba(0, 0, 0, 0.2);        // Adjusted shadow
 
 // Base Spacing Scale
 $space-1: 0.25rem;   // 4px  (xs)
@@ -154,7 +154,8 @@ body {
   font-family: $font-body;
   font-size: $font-size-body;
   line-height: 1.5;
-  color: $color-secondary;
+  color: $color-primary;
+  background-color: $color-background;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -209,7 +210,7 @@ h4, .feature-card h3 {
   border-bottom: 1px solid $color-border;
   min-height: auto;
   padding: $space-4 0;
-  background: $color-white;
+  background: $color-background;
   position: relative;
   
   .wrapper {
@@ -225,7 +226,7 @@ h4, .feature-card h3 {
 .site-title {
   font-size: $font-size-body;
   font-weight: 600;
-  color: $color-secondary;
+  color: $color-primary;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -233,7 +234,8 @@ h4, .feature-card h3 {
   
   &:hover, &:visited, &:active, &:focus {
     text-decoration: none;
-    color: $color-secondary;
+    opacity: 0.7;
+    color: $color-primary;
   }
   
   @include tablet-up {
@@ -245,7 +247,7 @@ h4, .feature-card h3 {
   position: absolute;
   top: 9px;
   right: $space-4;
-  background-color: $color-white;
+  background-color: $color-background;
   border: 1px solid $color-border;
   border-radius: 6px;
   text-align: right;
@@ -267,7 +269,7 @@ h4, .feature-card h3 {
     cursor: pointer;
 
     > svg path {
-      fill: $color-secondary;
+      fill: $color-primary;
     }
   }
 
@@ -287,8 +289,9 @@ h4, .feature-card h3 {
     margin: 0;
     font-size: $font-size-small;
     font-weight: 500;
-    color: $color-secondary;
+    color: $color-primary;
     text-decoration: none;
+    transition: opacity 0.2s ease;
     
     &:not(:last-child) {
       margin-right: 0;
@@ -296,7 +299,7 @@ h4, .feature-card h3 {
     
     &[href$="/products/"] {
       font-weight: 600;
-      border: 1px solid $color-secondary;
+      border: 1px solid $color-primary;
       border-radius: 6px;
       margin-top: $space-2;
       text-align: center;
@@ -343,7 +346,8 @@ h4, .feature-card h3 {
         text-align: left;
         
         &:hover {
-          background: $color-background;
+          background: transparent;
+          opacity: 0.7;
         }
       }
     }
@@ -360,7 +364,7 @@ h4, .feature-card h3 {
 // Hero section
 .hero-section {
   position: relative;
-  background: #F9FAFB;
+  background: $color-background;
   padding: $space-6 0;
   overflow: hidden;
   
@@ -406,7 +410,7 @@ h4, .feature-card h3 {
   font-size: $font-size-h1;  // 3rem for desktop
   font-weight: 800;
   line-height: 1.15;
-  color: $color-secondary;
+  color: $color-primary;
   margin: 0;
   letter-spacing: -0.02em;
   
@@ -415,7 +419,7 @@ h4, .feature-card h3 {
   }
   
   .emphasis {
-    color: $color-primary;
+    color: $color-accent;
     font-weight: 900;
     position: relative;
     display: inline-block;
@@ -434,7 +438,7 @@ h4, .feature-card h3 {
   
   .engineered {
     display: inline-block;
-    color: $color-secondary;
+    color: $color-primary;
     opacity: 0.9;
     font-weight: 700;
   }
@@ -442,7 +446,7 @@ h4, .feature-card h3 {
 
 .hero-subtitle {
   font-size: 1.25rem;  // 20px
-  color: rgba($color-secondary, 0.75);
+  color: rgba($color-primary, 0.75);
   line-height: 1.35;
   margin: 0;
   font-weight: 400;
@@ -480,22 +484,22 @@ h4, .feature-card h3 {
     
     &.primary {
       background: $color-white;
-      color: $color-secondary;
-      border: 1px solid $color-secondary;
+      color: $color-primary;
+      border: 1px solid $color-primary;
       
       &:hover {
-        background: $color-background;
+        opacity: 0.7;
         transform: translateY(-2px);
       }
     }
     
     &.secondary {
-      background: $color-accent;
-      color: $color-secondary;
+      background: $color-primary;
+      color: $color-background;
       border: none;
       
       &:hover {
-        background: darken($color-accent, 5%);
+        opacity: 0.7;
         transform: translateY(-2px);
       }
     }
@@ -536,14 +540,14 @@ h4, .feature-card h3 {
 .features-grid {
   @include features-grid;
   padding: $space-8 0;
-  background: $color-white;
+  background: $color-background;
   
   @include tablet-up {
     padding: $space-10 0;
   }
   
   .feature-card {
-    background: $color-white;
+    background: lighten($color-background, 3%);
     padding: $space-6;
     border-radius: 8px;
     border: 1px solid $color-border;
@@ -560,7 +564,7 @@ h4, .feature-card h3 {
       svg {
         width: 100%;
         height: 100%;
-        stroke: $color-secondary;
+        stroke: $color-primary;
         fill: none;
       }
     }
@@ -568,13 +572,13 @@ h4, .feature-card h3 {
     h3 {
       font-size: $font-size-h4;
       font-weight: 600;
-      color: $color-secondary;
+      color: $color-primary;
       margin-bottom: $space-2;
     }
     
     p {
       font-size: $font-size-body;
-      color: $color-secondary;
+      color: $color-primary;
       line-height: 1.5;
       margin: 0;
     }
@@ -590,13 +594,13 @@ h4, .feature-card h3 {
   .section-title {
     font-size: $font-size-h2;
     font-weight: 600;
-    color: $color-secondary;
+    color: $color-primary;
     margin-bottom: $space-3;
   }
   
   .section-subtitle {
     font-size: $font-size-body;
-    color: $color-secondary;
+    color: $color-primary;
     margin-bottom: $space-8;
     max-width: $container-content;
     margin-left: auto;
@@ -612,12 +616,11 @@ h4, .feature-card h3 {
     border: 1px solid $color-border;
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease;
     box-shadow: 0 2px 4px $color-shadow;
     
     &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba($color-secondary, 0.12);
+      transform: translateY(-2px);
     }
     
     .image-container {
@@ -625,7 +628,7 @@ h4, .feature-card h3 {
       padding-top: 75%;
       position: relative;
       background: linear-gradient(45deg, darken($color-accent, 5%), $color-accent);
-      border-bottom: 1px solid rgba($color-secondary, 0.1);
+      border-bottom: 1px solid rgba($color-primary, 0.1);
       
       &::before {
         content: '';
@@ -658,13 +661,13 @@ h4, .feature-card h3 {
       h3 {
         font-size: $font-size-h4;
         font-weight: 600;
-        color: $color-secondary;
+        color: $color-primary;
         margin-bottom: $space-2;
       }
       
       p {
         font-size: $font-size-body;
-        color: $color-secondary;
+        color: $color-primary;
         margin-bottom: $space-6;
         line-height: 1.6;
       }
@@ -672,17 +675,17 @@ h4, .feature-card h3 {
       .learn-more {
         display: inline-block;
         padding: $space-2 $space-6;
-        border: 1px solid $color-secondary;
+        border: 1px solid rgba($color-primary, 0.3);
         border-radius: 6px;
-        color: $color-secondary;
+        color: $color-primary;
         text-decoration: none;
         font-weight: 500;
-        transition: all 0.2s;
+        transition: all 0.2s ease;
         
         &:hover {
-          background: $color-background;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba($color-secondary, 0.1);
+          background: transparent;
+          opacity: 0.7;
+          border-color: rgba($color-primary, 0.5);
         }
       }
     }
@@ -691,8 +694,8 @@ h4, .feature-card h3 {
 
 // Commitment Section
 .commitment-section {
-  padding: $space-8 $space-6; // 32px vertical, 24px horizontal
-  background: #F9FAFB;
+  padding: $space-8 $space-6;
+  background: $color-background;
   text-align: center;
   max-width: $container-max;
   margin: 0 auto;
@@ -700,15 +703,15 @@ h4, .feature-card h3 {
   .section-title {
     font-size: $font-size-h2;
     font-weight: bold;
-    color: $color-secondary;
-    margin-bottom: $space-6; // 24px
+    color: $color-primary;
+    margin-bottom: $space-6;
   }
 }
 
 .commitment-list {
   max-width: $container-content;
   margin: 0 auto;
-  background: white;
+  background: $color-background;
   border-radius: 12px;
   padding: $space-6; // Increased padding for better visual balance
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -722,7 +725,7 @@ h4, .feature-card h3 {
   padding: $space-3 0; // 12px vertical
   
   &:not(:last-child) {
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid $color-border;
   }
   
   .check-icon {
@@ -735,7 +738,7 @@ h4, .feature-card h3 {
   
   p {
     font-size: $font-size-body;
-    color: $color-secondary;
+    color: $color-primary;
     line-height: 1.5;
     margin: 0;
   }
@@ -768,7 +771,7 @@ h4, .feature-card h3 {
 .cta-section {
   padding: $space-10 $space-6;
   text-align: center;
-  background: $color-secondary;
+  background: lighten($color-background, 5%);
   border-radius: 8px;
   margin: $space-8 auto;
   max-width: $container-content;
@@ -776,32 +779,32 @@ h4, .feature-card h3 {
   .section-title {
     font-size: $font-size-h2;
     font-weight: bold;
-    color: $color-background;
+    color: $color-primary;
     margin-bottom: $space-3;
   }
   
   .section-subtitle {
     font-size: $font-size-body;
-    color: $color-background;
+    color: $color-primary;
     margin-bottom: $space-6;
   }
   
   .cta-button {
     .button {
       display: inline-block;
-      padding: $space-2 $space-4;
+      padding: $space-3 $space-6;
       font-size: $font-size-body;
       font-weight: 500;
-      background: $color-accent;
-      color: $color-secondary;
+      background: $color-primary;
+      color: $color-background;
       text-decoration: none;
       border-radius: 6px;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
+      border: none;
       
       &:hover {
-        background: darken($color-accent, 10%);
+        opacity: 0.7;
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba($color-accent, 0.2);
       }
     }
   }
@@ -975,6 +978,7 @@ h4, .feature-card h3 {
   max-width: $container-max;
   margin: 0 auto;
   padding: $space-8;
+  background-color: $color-background;
 
   @include mobile-only {
     grid-template-columns: 1fr;
@@ -998,7 +1002,7 @@ h4, .feature-card h3 {
   h2 {
     font-size: $font-size-h3;
     font-weight: 600;
-    color: $color-secondary;
+    color: $color-primary;
     margin-bottom: $space-4;
     padding-bottom: $space-2;
     border-bottom: 2px solid $color-border;
@@ -1012,55 +1016,25 @@ h4, .feature-card h3 {
     li {
       margin-bottom: $space-2;
       
-      &.parent-item {
-        margin-bottom: $space-4;
-        
-        a {
-          color: $color-secondary;
-          font-weight: 600;
-          font-size: $font-size-body;
-          padding: $space-2 $space-3;
-          border-radius: 6px;
-          display: block;
-          
-          &:hover {
-            background: $color-background;
-            color: $color-primary;
-          }
-          
-          &.active {
-            background: $color-background;
-            color: $color-primary;
-          }
-        }
-      }
-      
-      &.child-item {
-        padding-left: $space-4;
-        
-        a {
-          color: lighten($color-secondary, 15%);
-          font-size: $font-size-small;
-          padding: $space-2 $space-3;
-          border-radius: 6px;
-          display: block;
-          
-          &:hover {
-            background: $color-background;
-            color: $color-primary;
-          }
-          
-          &.active {
-            background: $color-background;
-            color: $color-primary;
-            font-weight: 500;
-          }
-        }
-      }
-      
       a {
+        color: rgba($color-primary, 0.85);
+        font-size: $font-size-body;
+        padding: $space-2 $space-3;
+        border-radius: 6px;
+        display: block;
         text-decoration: none;
-        transition: all 0.2s ease;
+        transition: opacity 0.2s ease;
+        
+        &:hover {
+          background: transparent;
+          opacity: 0.7;
+        }
+        
+        &.active {
+          opacity: 1;
+          font-weight: 600;
+          color: $color-primary;
+        }
       }
     }
   }
@@ -1070,14 +1044,14 @@ h4, .feature-card h3 {
   h1 {
     font-size: $font-size-h2;
     font-weight: 600;
-    color: $color-secondary;
+    color: $color-primary;
     margin-bottom: $space-4;
   }
 
   h2 {
     font-size: $font-size-h3;
     font-weight: 600;
-    color: $color-secondary;
+    color: $color-primary;
     margin: $space-8 0 $space-4;
 
     &:first-child {
@@ -1085,11 +1059,45 @@ h4, .feature-card h3 {
     }
   }
 
+  h3, h4 {
+    color: $color-primary;
+    margin-top: $space-6;
+    margin-bottom: $space-2;
+  }
+
   p {
     font-size: $font-size-body;
     line-height: 1.6;
-    color: $color-secondary;
+    color: rgba($color-primary, 0.85);
     margin-bottom: $space-4;
+  }
+
+  ul, ol {
+    color: rgba($color-primary, 0.85);
+    margin-bottom: $space-4;
+    padding-left: $space-4;
+
+    li {
+      margin-bottom: $space-2;
+    }
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: $space-4 0;
   }
 }
 
@@ -1121,7 +1129,7 @@ h4, .feature-card h3 {
   h1 {
     font-size: $font-size-h2;
     font-weight: 600;
-    color: $color-secondary;
+    color: $color-primary;
     margin-bottom: $space-6;
     text-align: center;
   }
@@ -1138,17 +1146,163 @@ h4, .feature-card h3 {
     strong {
       font-size: $font-size-body;
       font-weight: 600;
-      color: $color-secondary;
+      color: $color-primary;
     }
     
     span, a {
       font-size: $font-size-body;
-      color: $color-secondary;
+      color: $color-primary;
       text-decoration: none;
     }
     
     a:hover {
-      color: $color-primary;
+      color: $color-accent;
+    }
+  }
+}
+
+// Base link styles with consistent hover
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+
+// Site header and navigation
+.site-header {
+  .site-title {
+    &:hover, &:visited, &:active, &:focus {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
+}
+
+.site-nav {
+  .page-link {
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+      opacity: 0.7;
+    }
+    
+    &[href$="/products/"] {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// Products sidebar
+.products-sidebar {
+  ul {
+    li {
+      a {
+        transition: opacity 0.2s ease;
+        
+        &:hover {
+          opacity: 0.7;
+        }
+        
+        &.active {
+          opacity: 1;
+          font-weight: 600;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+// Product cards
+.product-card {
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  .learn-more {
+    transition: all 0.2s ease;
+    border: 1px solid rgba($color-primary, 0.3);
+    
+    &:hover {
+      opacity: 0.7;
+      border-color: rgba($color-primary, 0.5);
+    }
+  }
+}
+
+// Featured products
+.featured-products-grid {
+  .product-card {
+    &:hover {
+      transform: translateY(-2px);
+    }
+    
+    .learn-more {
+      transition: all 0.2s ease;
+      
+      &:hover {
+        opacity: 0.7;
+        border-color: rgba($color-primary, 0.5);
+      }
+    }
+  }
+}
+
+// CTA section
+.cta-section {
+  .cta-button {
+    .button {
+      display: inline-block;
+      padding: $space-3 $space-6;
+      font-size: $font-size-body;
+      font-weight: 500;
+      background: $color-primary;
+      color: $color-background;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      border: none;
+      
+      &:hover {
+        opacity: 0.7;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Hero buttons
+.hero-buttons {
+  .button {
+    transition: all 0.2s ease;
+    
+    &.primary, &.secondary {
+      &:hover {
+        opacity: 0.7;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Contact page links
+.contact-card {
+  .info-item {
+    a {
+      transition: opacity 0.2s ease;
+      
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }
