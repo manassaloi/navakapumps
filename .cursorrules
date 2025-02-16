@@ -129,3 +129,28 @@ List of rules and guidelines for this project.
 	•	Add cache-busting techniques to asset URLs.
 	4.	CDN Usage
 	•	Serve static assets (e.g., images, fonts) via a CDN for faster delivery.
+
+8. Mobile vs Desktop Style Rules
+	1.	Separation of Concerns
+	•	NEVER modify desktop styles when fixing mobile issues
+	•	All mobile-specific changes MUST be within @include mobile-only blocks
+	•	Desktop styles should remain untouched unless explicitly requested
+	•	When fixing mobile issues, first check if desktop is working correctly
+	
+	2.	Mobile Style Changes
+	•	Always use existing SCSS variables for consistency
+	•	Keep mobile fixes contained within their specific breakpoint
+	•	Document any mobile-specific overrides with comments
+	•	Test changes on both mobile AND desktop to ensure no side effects
+	
+	3.	Code Review Checklist for Mobile Changes
+	•	Verify all new styles are within @include mobile-only
+	•	Confirm no desktop styles were modified
+	•	Check that existing desktop functionality remains intact
+	•	Ensure mobile fixes don't introduce global scope changes
+	
+	4.	Common Pitfalls to Avoid
+	•	Adding box-sizing, width, or overflow to base classes
+	•	Modifying shared variables or mixins for mobile fixes
+	•	Changing padding/margin on desktop when fixing mobile
+	•	Adding mobile fixes outside of mobile-only blocks
