@@ -4,7 +4,7 @@
 
 layout: indexpage
 ---
-# Navaka is *Excellence, Engineered*.
+# Navaka is *Excellence,Engineered*.
 
 We are driving Industrial Efficiency with Reliable Pump Solutions.
 
