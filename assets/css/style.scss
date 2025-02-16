@@ -51,7 +51,6 @@ $container-content: 768px; // max-w-3xl
 // Add this before @import "minima"
 $a-color: #2B2B2B;
 
-
 // Breakpoint System
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
@@ -361,181 +360,6 @@ h4, .feature-card h3 {
   line-height: 1.45;
 }
 
-// Hero section
-.hero-section {
-  position: relative;
-  background: $color-background;
-  padding: $space-6 0;
-  overflow: hidden;
-  
-  @include tablet-up {
-    padding: $space-8 0;
-  }
-}
-
-.hero-container {
-  @extend .container;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $space-4;
-  align-items: center;
-  
-  @include tablet-up {
-    grid-template-columns: 55% 45%;
-    gap: 0;
-  }
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: $space-4;
-  text-align: center;
-  z-index: 2;
-  
-  @include tablet-up {
-    text-align: left;
-    padding-right: $space-8;
-    gap: $space-6;
-  }
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: $space-2;
-}
-
-.hero-title {
-  font-size: $font-size-h1;  // 3rem for desktop
-  font-weight: 800;
-  line-height: 1.15;
-  color: $color-primary;
-  margin: 0;
-  letter-spacing: -0.02em;
-  
-  @include mobile-only {
-    font-size: 2.5rem;  // 40px for mobile
-  }
-  
-  .emphasis {
-    color: $color-accent;
-    font-weight: 900;
-    position: relative;
-    display: inline-block;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -0.3rem;
-      left: -2%;
-      width: 104%;
-      height: 0.4rem;
-      background: rgba($color-accent, 0.85);
-      z-index: -1;
-    }
-  }
-  
-  .engineered {
-    display: inline-block;
-    color: $color-primary;
-    opacity: 0.9;
-    font-weight: 700;
-  }
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;  // 20px
-  color: rgba($color-primary, 0.75);
-  line-height: 1.35;
-  margin: 0;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  margin-top: $space-2;
-  
-  @include mobile-only {
-    font-size: 1rem;  // 16px
-  }
-  
-  @include tablet-up {
-    font-size: $font-size-body;
-    max-width: 90%;
-  }
-}
-
-.hero-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: $space-3;
-  
-  @include tablet-up {
-    flex-direction: row;
-    gap: $space-4;
-  }
-  
-  .button {
-    padding: $space-3 $space-6;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: $font-size-body;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    text-align: center;
-    
-    &.primary {
-      background: $color-white;
-      color: $color-primary;
-      border: 1px solid $color-primary;
-      
-      &:hover {
-        opacity: 0.7;
-        transform: translateY(-2px);
-      }
-    }
-    
-    &.secondary {
-      background: $color-primary;
-      color: $color-background;
-      border: none;
-      
-      &:hover {
-        opacity: 0.7;
-        transform: translateY(-2px);
-      }
-    }
-  }
-}
-
-.hero-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  border-radius: 12px;
-  overflow: hidden;
-  order: -1;
-  margin-left: 0;
-  
-  @include tablet-up {
-    height: 400px;
-    order: 2;
-    margin-left: -5%;
-  }
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: inherit;
-  }
-}
-
 // Features Grid Section
 .features-grid {
   @include features-grid;
@@ -788,35 +612,6 @@ h4, .feature-card h3 {
     color: $color-primary;
     margin-bottom: $space-6;
   }
-  
-  .cta-button {
-    .button {
-      display: inline-block;
-      padding: $space-3 $space-6;
-      font-size: $font-size-body;
-      font-weight: 500;
-      background: $color-primary;
-      color: $color-background;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      border: none;
-      
-      &:hover {
-        opacity: 0.7;
-        transform: translateY(-2px);
-      }
-    }
-  }
-  
-  @include mobile-only {
-    margin: $space-6 $space-4;
-    padding: $space-8 $space-4;
-    
-    .section-title {
-      font-size: $font-size-h3;
-    }
-  }
 }
 
 @media (max-width: 1024px) {
@@ -845,19 +640,6 @@ h4, .feature-card h3 {
     
     .site-nav .page-link {
       margin-left: 0.75rem;
-    }
-  }
-  
-  .hero-section {
-    min-height: auto;
-    padding: $space-6 $space-4;
-    
-    .hero-title {
-      font-size: $font-size-h2;
-    }
-    
-    .hero-image {
-      height: 250px;
     }
   }
   
@@ -941,32 +723,86 @@ h4, .feature-card h3 {
   .featured-products,
   .commitment-section,
   .cta-section {
-    padding-left: $space-4;  // 16px on tablet
-    padding-right: $space-4;
+    padding: $space-8 $space-4;
+    background: $color-background;
   }
-}
 
-@media (max-width: 1024px) {
   .hero-section {
     grid-template-columns: 1fr;
-    padding: $space-8 $space-4;
-    background: #F9FAFB;
     
     .hero-content {
       padding: 0;
       text-align: center;
-      
-      &::before {
-        display: none;
-      }
     }
+  }
+
+  .featured-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-4;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .site-header {
-    .wrapper {
-      padding: 0 $space-4;
+    padding: $space-4;
+    background: $color-background;
+    
+    .site-nav .page-link {
+      margin-left: $space-4;
+    }
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: $space-4;
+  }
+  
+  .cta-section {
+    margin: $space-6 $space-4;
+    background: $color-background;
+    
+    .section-title {
+      font-size: $font-size-h3;
+    }
+  }
+  
+  .commitment-section {
+    background: $color-background;
+    
+    .section-title {
+      font-size: $font-size-h3;
+    }
+  }
+  
+  .featured-products {
+    background: $color-background;
+    
+    .section-title {
+      font-size: $font-size-h3;
+    }
+    
+    .section-subtitle {
+      font-size: $font-size-small;
+      margin-bottom: $space-6;
+    }
+  }
+  
+  .featured-products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-card {
+    padding: $space-4;
+    background: $color-background;
+    
+    h3 {
+      font-size: $font-size-body;
+      margin-bottom: $space-2;
+    }
+    
+    p {
+      font-size: $font-size-small;
+      margin-bottom: $space-4;
     }
   }
 }
@@ -1252,56 +1088,6 @@ a {
       &:hover {
         opacity: 0.7;
         border-color: rgba($color-primary, 0.5);
-      }
-    }
-  }
-}
-
-// CTA section
-.cta-section {
-  .cta-button {
-    .button {
-      display: inline-block;
-      padding: $space-3 $space-6;
-      font-size: $font-size-body;
-      font-weight: 500;
-      background: $color-primary;
-      color: $color-background;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      border: none;
-      
-      &:hover {
-        opacity: 0.7;
-        transform: translateY(-2px);
-      }
-    }
-  }
-}
-
-// Hero buttons
-.hero-buttons {
-  .button {
-    transition: all 0.2s ease;
-    
-    &.primary, &.secondary {
-      &:hover {
-        opacity: 0.7;
-        transform: translateY(-2px);
-      }
-    }
-  }
-}
-
-// Contact page links
-.contact-card {
-  .info-item {
-    a {
-      transition: opacity 0.2s ease;
-      
-      &:hover {
-        opacity: 0.7;
       }
     }
   }
