@@ -4,8 +4,6 @@ title: PC Pumps
 permalink: /products/pc-pumps/
 ---
 
-## PC Pumps - Navaka India
-
 **Leading Supplier of Advanced Roto Pumps**
 
 Navaka India offers a comprehensive range of PC pumps engineered for superior performance across diverse industrial applications. Our pumps combine innovative design with robust construction to deliver reliable and efficient fluid handling solutions.

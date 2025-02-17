@@ -4,8 +4,6 @@ title: Leak Proof Pumps
 permalink: /products/leak-proof-pumps/
 ---
 
-## Leak Proof Pumps - Navaka India
-
 **Leading Supplier of High-Quality Leak Proof Pumps**
 
 Navaka India offers a comprehensive range of leak-proof pumps designed for handling corrosive fluids and demanding industrial applications. Our pumps are engineered for reliability, durability, and superior performance in challenging environments.
