@@ -370,4 +370,47 @@
       }
     }
   }
+}
+
+// Site header branding styles
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  padding: $space-2 0;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  
+  @include mobile-only {
+    height: 32px;
+  }
+}
+
+.site-name {
+  font-size: $font-size-h4;
+  font-weight: 600;
+  color: $color-primary;
+  
+  @include mobile-only {
+    font-size: $font-size-body;
+  }
+}
+
+.site-header {
+  .wrapper {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    
+    @include mobile-only {
+      padding: 0 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
 } 
