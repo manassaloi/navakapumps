@@ -212,6 +212,12 @@ h4, .feature-card h3 {
   background: $color-background;
   position: relative;
   
+  @include mobile-only {
+    padding: $space-4;
+    display: flex;
+    align-items: center;
+  }
+  
   .wrapper {
     display: flex;
     align-items: center;
@@ -219,6 +225,12 @@ h4, .feature-card h3 {
     max-width: $container-max;
     margin: 0 auto;
     padding: 0 $space-4;
+    
+    @include mobile-only {
+      padding: 0;
+      width: 100%;
+      position: relative;
+    }
   }
 }
 
@@ -252,6 +264,14 @@ h4, .feature-card h3 {
   text-align: right;
   padding: $space-2;
   z-index: 999;
+
+  @include mobile-only {
+    top: 50%;
+    transform: translateY(-50%);
+    right: $space-4;
+    padding: $space-2;
+    margin: 0;
+  }
 
   .nav-trigger {
     display: none;
