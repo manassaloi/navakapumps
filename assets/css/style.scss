@@ -471,7 +471,7 @@ h4, .feature-card h3 {
       width: 100%;
       padding-top: 75%;
       position: relative;
-      background: linear-gradient(45deg, darken($color-accent, 5%), $color-accent);
+  // background: linear-gradient(45deg, darken($color-accent, 5%), $color-accent);
       border-bottom: 1px solid rgba($color-primary, 0.1);
       
       &::before {
