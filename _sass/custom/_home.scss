@@ -1,22 +1,22 @@
 .hero-section {
   position: relative;
   background: $color-background;
-  padding: calc($space-12 * 2) 0;  // Reduced from 3.5 to 2
+  padding: calc($space-12 * 0.75) 0;  // Significantly reduced padding
   overflow: hidden;
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $space-12;  // Reduced from 1.5
+  gap: $space-12;
   align-items: center;
   max-width: $container-max;
   margin: 0 auto;
-  padding: 0 $space-6;  // Reduced padding
+  padding: 0 $space-6;
 
   @include mobile-only {
     grid-template-columns: 1fr;
-    gap: $space-6;  // Reduced gap for mobile
+    gap: $space-6;
     text-align: center;
     padding: 0 1rem;
     width: 100%;
@@ -27,24 +27,24 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: $space-6;  // Reduced from 1.5
+  gap: $space-4;  // Reduced gap
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  gap: $space-4;  // Reduced gap
+  gap: $space-3;  // Reduced gap
 }
 
 .hero-title {
-  font-size: calc($font-size-h1 * 2);  // Slightly reduced
-  font-weight: 800;  // Slightly reduced
-  line-height: 1.1;  // Tighter line height
+  font-size: calc($font-size-h1 * 1.75);  // Slightly smaller title
+  font-weight: 800;
+  line-height: 1.1;
   color: $color-primary;
   margin: 0;
   
   @include mobile-only {
-    font-size: calc($font-size-h1 * 1.5);
+    font-size: calc($font-size-h1 * 1.25);
   }
   
   .emphasis {
@@ -76,9 +76,9 @@
 }
 
 .hero-subtitle {
-  font-size: $font-size-h4;  // Reduced size
+  font-size: $font-size-h4;
   color: rgba($color-primary, 0.7);
-  line-height: 1.5;
+  line-height: 1.4;  // Slightly tighter line height
   margin: 0;
   font-weight: 400;
   max-width: 40ch;
@@ -93,7 +93,7 @@
 .cta-button {
   display: flex;
   gap: $space-4;
-  margin-top: $space-2;
+  margin-top: $space-2;  // Reduced margin
   
   @include mobile-only {
     flex-direction: column;
@@ -162,8 +162,8 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 75%;  // Reduced from 100% to 75%
-  border-radius: 12px;
+  padding-bottom: 75%;  // Changed from 100% to 75% for a shorter aspect ratio
+  border-radius: 8px;
   overflow: hidden;
   
   &::after {
@@ -173,13 +173,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(31, 31, 31, 0.05) 0%, rgba(31, 31, 31, 0.1) 100%);  // Lighter gradient
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.05) 100%);
     pointer-events: none;
   }
   
   @include mobile-only {
     order: -1;
-    padding-bottom: 60%;  // Even smaller for mobile
+    padding-bottom: 60%;  // Even shorter on mobile
   }
 }
 
@@ -195,6 +195,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: contrast(1.1);  // Slightly increase contrast for the B&W image
   }
 }
 
