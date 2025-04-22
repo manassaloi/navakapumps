@@ -17,10 +17,10 @@ Specialized pumps designed for handling corrosive fluids and demanding industria
 #### [Navaka PC Pumps]({{ site.baseurl }}/products/pc-pumps)
 High-performance pumps available in various configurations including horizontal external bearing, vertical, and positive displacement pumps. Ideal for industries ranging from oil & gas to food & beverage.
 
-#### [Rotodel Hose Pumps]({{ site.baseurl }}/products/rotodel-pumps)
+#### [Rotodel Gear Pumps]({{ site.baseurl }}/products/rotodel-gear-pumps)
 Advanced peristaltic pumps engineered for demanding industrial applications. Perfect for handling abrasive slurries and sensitive materials with precision and reliability.
 
-#### [Agricultural Equipment]({{ site.baseurl }}/products/agricultural-machine)
+#### [Rotodel Lobe Pumps]({{ site.baseurl }}/products/rotodel-lobe-pumps)
 State-of-the-art rice milling solutions designed specifically for Indian agriculture. Available in automatic (SN-4.7) and economic (SN-3.0) versions, combining efficiency with quality output.
 
 #### Why Choose Navaka Products?
