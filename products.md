@@ -23,10 +23,9 @@ Advanced twin vertical gear pumps for all viscous media.
 #### [Rotodel Lobe Pumps]({{ site.baseurl }}/products/rotodel-lobe-pumps)
 Fully hygenic food application lobe pumps.
 
-#### Why Choose Navaka Products?
+#### Why choose Navaka Pumps?
 
 * **One stop solution for all your pumping requirements:** We deliver quality industrial pumps provided by reputed manufacturers.
-* **Quality Assurance:** All our products meet stringent quality checks.
 * **Comprehensive Support:** Expert technical assistance and after-sales service.
 * **Wide Application Range:** Solutions for diverse industrial and agricultural needs.
 * **Innovation:** Latest technology and advanced features across our product range.
