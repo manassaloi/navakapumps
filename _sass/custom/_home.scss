@@ -1,3 +1,15 @@
+// Add animation keyframes for the fade/slide up effect
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-section {
   position: relative;
   background: $color-background;
@@ -5,7 +17,7 @@
   overflow: hidden;
   
   @include desktop-up {
-    padding: 6rem 0 6rem; // Reduced top padding, maintained bottom spacing
+    padding: 6rem 0 6rem;
   }
 }
 
@@ -48,7 +60,7 @@
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    gap: 1.5rem; // Reduced from 3rem for tighter spacing
+    gap: 1.5rem;
   }
 }
 
@@ -68,7 +80,11 @@
   line-height: 1.1;
   color: $color-primary;
   margin: 0;
-  white-space: nowrap; // Prevent line breaks
+  white-space: nowrap;
+  
+  // Animation for title
+  opacity: 0;
+  animation: fadeSlideUp 600ms ease-out forwards;
   
   @include desktop-up {
     font-size: calc($font-size-h1 * 2);
@@ -77,7 +93,7 @@
   
   @include mobile-only {
     font-size: calc($font-size-h1 * 1.25);
-    white-space: normal; // Allow line breaks on mobile
+    white-space: normal;
   }
   
   .emphasis {
@@ -104,7 +120,7 @@
     color: $color-primary;
     opacity: 0.9;
     font-weight: 700;
-    margin-left: 0.25em; // Add space between words
+    margin-left: 0.25em;
   }
 }
 
@@ -114,8 +130,12 @@
   line-height: 1.4;
   margin: 0;
   font-weight: 400;
-  max-width: 100%; // Allow full width
-  white-space: nowrap; // Prevent line breaks
+  max-width: 100%;
+  white-space: nowrap;
+  
+  // Animation for subtitle - 200ms delay
+  opacity: 0;
+  animation: fadeSlideUp 600ms ease-out 200ms forwards;
   
   @include desktop-up {
     font-size: calc($font-size-h4 * 1.2);
@@ -125,8 +145,8 @@
   @include mobile-only {
     font-size: $font-size-body;
     margin: 0 auto;
-    white-space: normal; // Allow line breaks on mobile
-    max-width: 40ch; // Limit width on mobile
+    white-space: normal;
+    max-width: 40ch;
   }
 }
 
@@ -136,9 +156,13 @@
   gap: $space-4;
   margin-top: $space-2;
   
+  // Animation for buttons - 400ms delay
+  opacity: 0;
+  animation: fadeSlideUp 600ms ease-out 400ms forwards;
+  
   @include desktop-up {
     gap: 1.5rem;
-    margin-top: 1.5rem; // Reduced from 2.5rem to bring buttons closer to text
+    margin-top: 1.5rem;
   }
   
   @include mobile-only {

@@ -19,3 +19,17 @@ a {
     color: inherit;  // Use color defined in hero button styles
   }
 } 
+
+// Override page-content padding for hero section
+.page-content {
+  padding-top: 0 !important; // Remove top padding to fix the 96px spacing issue
+}
+
+// Ensure animations only run once when page loads
+html.js {
+  .hero-title,
+  .hero-subtitle,
+  .hero-buttons {
+    animation-play-state: running;
+  }
+} 
