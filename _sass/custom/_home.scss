@@ -1,4 +1,4 @@
-// Add animation keyframes for the fade/slide up effect
+// Animation keyframes
 @keyframes fadeSlideUp {
   from {
     opacity: 0;
@@ -7,6 +7,50 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) rotate(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px) rotate(1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes buttonShine {
+  from {
+    background-position: -100px;
+  }
+  to {
+    background-position: 200px;
   }
 }
 
@@ -112,6 +156,7 @@
       height: 0.35rem;
       background: rgba($color-accent, 0.85);
       z-index: -1;
+      animation: scaleIn 800ms ease-out 300ms backwards;
     }
   }
   
@@ -189,7 +234,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.875rem 2rem; // Slightly larger padding for desktop
+    padding: 0.875rem 2rem;
     border-radius: 6px;
     font-weight: 500;
     font-size: $font-size-small;
@@ -198,9 +243,37 @@
     text-align: center;
     min-width: 160px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    &:hover {
+      transform: translateY(-2px) scale(1.03);
+      
+      &::after {
+        opacity: 1;
+        animation: buttonShine 1.2s ease-out;
+      }
+    }
     
     @include desktop-up {
-      font-size: 1rem; // Slightly larger font size on desktop
+      font-size: 1rem;
     }
     
     &.primary {
@@ -210,7 +283,6 @@
       
       &:hover {
         opacity: 0.85;
-        transform: translateY(-1px);
         background: transparent;
         color: $color-primary;
       }
@@ -224,7 +296,6 @@
       
       &:hover {
         opacity: 0.9;
-        transform: translateY(-1px);
         background: darken(#d1cfc0, 5%);
         color: #1f1f1f !important;
       }
@@ -239,13 +310,15 @@
   padding-bottom: 75%;
   border-radius: 8px;
   overflow: hidden;
+  opacity: 0;
+  animation: scaleIn 800ms cubic-bezier(0.34, 1.56, 0.64, 1) 600ms forwards;
   
   @include desktop-up {
     order: 2;
     width: 100%;
-    max-width: 900px; // Larger image container
+    max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 50%; // Shorter aspect ratio
+    padding-bottom: 50%;
   }
   
   @include mobile-only {
@@ -277,7 +350,12 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: contrast(1.1);  // Slightly increase contrast for the B&W image
+    filter: contrast(1.1);
+    transition: transform 8s ease-out;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -303,6 +381,25 @@
   border-radius: 12px;
   background: rgba($color-primary, 0.02);
   border: 1px solid rgba($color-primary, 0.08);
+  opacity: 0;
+  transform: scale(0.98);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  // Animation triggers through JS/Intersection Observer
+  &.animate {
+    animation: scaleIn 600ms ease-out forwards;
+  }
+  
+  // Staggered delays for feature cards
+  &:nth-child(1) { animation-delay: 100ms; }
+  &:nth-child(2) { animation-delay: 250ms; }
+  &:nth-child(3) { animation-delay: 400ms; }
+  &:nth-child(4) { animation-delay: 550ms; }
+  
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
   
   @include mobile-only {
     padding: 1.5rem;
@@ -312,6 +409,8 @@
   
   .feature-icon {
     margin-bottom: 1.5rem;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
     
     svg {
       width: 48px;
@@ -320,6 +419,10 @@
       stroke-width: 1.5;
       fill: none;
     }
+  }
+  
+  &:hover .feature-icon {
+    transform: scale(1.1);
   }
   
   h3 {
@@ -335,6 +438,57 @@
     line-height: 1.6;
     font-size: 0.9375rem;
     margin: 0;
+  }
+}
+
+// Featured products animations
+.featured-products-grid {
+  .product-card {
+    opacity: 0;
+    
+    &.animate {
+      animation-duration: 700ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    &:nth-child(odd).animate {
+      animation-name: slideInLeft;
+    }
+    
+    &:nth-child(even).animate {
+      animation-name: slideInRight;
+    }
+    
+    &:nth-child(1) { animation-delay: 100ms; }
+    &:nth-child(2) { animation-delay: 250ms; }
+    &:nth-child(3) { animation-delay: 400ms; }
+    &:nth-child(4) { animation-delay: 550ms; }
+    
+    &:hover {
+      transform: translateY(-8px);
+    }
+    
+    .image-container {
+      overflow: hidden;
+      
+      img {
+        transition: transform 0.5s ease;
+      }
+    }
+    
+    &:hover .image-container img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Section title animations
+.section-title, .section-subtitle {
+  opacity: 0;
+  
+  &.animate {
+    animation: fadeSlideUp 600ms ease-out forwards;
   }
 }
 
@@ -495,5 +649,30 @@
       width: 100%;
       box-sizing: border-box;
     }
+  }
+}
+
+// Fix initial visibility of animated elements
+.hero-title,
+.hero-subtitle,
+.hero-buttons,
+.hero-image-wrapper,
+.feature-card,
+.product-card,
+.section-title,
+.section-subtitle {
+  visibility: hidden;
+}
+
+.js-enabled {
+  .hero-title,
+  .hero-subtitle,
+  .hero-buttons,
+  .hero-image-wrapper,
+  .feature-card,
+  .product-card,
+  .section-title,
+  .section-subtitle {
+    visibility: visible;
   }
 } 

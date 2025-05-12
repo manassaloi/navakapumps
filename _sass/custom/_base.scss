@@ -25,11 +25,67 @@ a {
   padding-top: 0 !important; // Remove top padding to fix the 96px spacing issue
 }
 
-// Ensure animations only run once when page loads
-html.js {
+// Animation accessibility - respect reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Add a class to enable JS detection for animations
+.js-enabled {
   .hero-title,
   .hero-subtitle,
-  .hero-buttons {
-    animation-play-state: running;
+  .hero-buttons,
+  .hero-image-wrapper {
+    will-change: opacity, transform;
   }
-} 
+  
+  .feature-card,
+  .product-card,
+  .section-title,
+  .section-subtitle {
+    will-change: opacity, transform;
+  }
+}
+
+// Subtle parallax effect for sections
+.features-grid,
+.featured-products,
+.commitment-section,
+.cta-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// This will be added via JavaScript but included here for documentation
+// The actual script will add .animate classes to elements as they enter viewport
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  // Add js-enabled class to body
+  document.body.classList.add('js-enabled');
+  
+  // Setup Intersection Observer for scroll animations
+  const animationObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  
+  // Observe all elements that should animate on scroll
+  document.querySelectorAll('.feature-card, .product-card, .section-title, .section-subtitle').forEach(
+    el => animationObserver.observe(el)
+  );
+});
+*/ 

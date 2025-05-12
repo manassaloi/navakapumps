@@ -18,4 +18,29 @@
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.png">
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/favicon.png">
   {%- feed_meta -%}
+  <!-- Animation functionality for scroll-triggered animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add js-enabled class to body
+      document.body.classList.add('js-enabled');
+      
+      // Setup Intersection Observer for scroll animations
+      const animationObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target); // Only animate once
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+      );
+      
+      // Observe all elements that should animate on scroll
+      document.querySelectorAll('.feature-card, .product-card, .section-title, .section-subtitle').forEach(
+        el => animationObserver.observe(el)
+      );
+    });
+  </script>
 </head>
