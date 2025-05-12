@@ -1,8 +1,12 @@
 .hero-section {
   position: relative;
   background: $color-background;
-  padding: calc($space-12 * 0.75) 0;  // Significantly reduced padding
+  padding: calc($space-12 * 0.75) 0;
   overflow: hidden;
+  
+  @include desktop-up {
+    padding: 6rem 0 6rem; // Reduced top padding, maintained bottom spacing
+  }
 }
 
 .hero-container {
@@ -13,6 +17,15 @@
   max-width: $container-max;
   margin: 0 auto;
   padding: 0 $space-6;
+  
+  @include desktop-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem; // Slightly reduced gap between content and image
+    padding: 0 clamp(2rem, 8vw, 12rem);
+    max-width: 1400px;
+  }
 
   @include mobile-only {
     grid-template-columns: 1fr;
@@ -27,24 +40,44 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: $space-4;  // Reduced gap
+  gap: $space-4;
+  
+  @include desktop-up {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1.5rem; // Reduced from 3rem for tighter spacing
+  }
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  gap: $space-3;  // Reduced gap
+  gap: $space-3;
+  
+  @include desktop-up {
+    gap: 1rem; // Reduced gap between title and subtitle
+  }
 }
 
 .hero-title {
-  font-size: calc($font-size-h1 * 1.75);  // Slightly smaller title
+  font-size: calc($font-size-h1 * 1.75);
   font-weight: 800;
   line-height: 1.1;
   color: $color-primary;
   margin: 0;
+  white-space: nowrap; // Prevent line breaks
+  
+  @include desktop-up {
+    font-size: calc($font-size-h1 * 2);
+    letter-spacing: -0.02em;
+  }
   
   @include mobile-only {
     font-size: calc($font-size-h1 * 1.25);
+    white-space: normal; // Allow line breaks on mobile
   }
   
   .emphasis {
@@ -52,15 +85,15 @@
     font-weight: 800;
     position: relative;
     display: inline-block;
-    margin: 0 0.15em;  // Reduced spacing
+    margin: 0 0.15em;
     
     &::after {
       content: '';
       position: absolute;
       bottom: -0.15em;
       left: -3%;
-      width: 106%;  // Slightly reduced
-      height: 0.35rem;  // Slightly reduced
+      width: 106%;
+      height: 0.35rem;
       background: rgba($color-accent, 0.85);
       z-index: -1;
     }
@@ -71,21 +104,29 @@
     color: $color-primary;
     opacity: 0.9;
     font-weight: 700;
-    margin-top: 0.1em;  // Reduced spacing
+    margin-left: 0.25em; // Add space between words
   }
 }
 
 .hero-subtitle {
   font-size: $font-size-h4;
   color: rgba($color-primary, 0.7);
-  line-height: 1.4;  // Slightly tighter line height
+  line-height: 1.4;
   margin: 0;
   font-weight: 400;
-  max-width: 40ch;
+  max-width: 100%; // Allow full width
+  white-space: nowrap; // Prevent line breaks
+  
+  @include desktop-up {
+    font-size: calc($font-size-h4 * 1.2);
+    line-height: 1.6;
+  }
   
   @include mobile-only {
     font-size: $font-size-body;
     margin: 0 auto;
+    white-space: normal; // Allow line breaks on mobile
+    max-width: 40ch; // Limit width on mobile
   }
 }
 
@@ -93,7 +134,12 @@
 .cta-button {
   display: flex;
   gap: $space-4;
-  margin-top: $space-2;  // Reduced margin
+  margin-top: $space-2;
+  
+  @include desktop-up {
+    gap: 1.5rem;
+    margin-top: 1.5rem; // Reduced from 2.5rem to bring buttons closer to text
+  }
   
   @include mobile-only {
     flex-direction: column;
@@ -119,7 +165,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: $space-2 $space-6;
+    padding: 0.875rem 2rem; // Slightly larger padding for desktop
     border-radius: 6px;
     font-weight: 500;
     font-size: $font-size-small;
@@ -128,6 +174,10 @@
     text-align: center;
     min-width: 160px;
     cursor: pointer;
+    
+    @include desktop-up {
+      font-size: 1rem; // Slightly larger font size on desktop
+    }
     
     &.primary {
       background: transparent;
@@ -162,9 +212,22 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 75%;  // Changed from 100% to 75% for a shorter aspect ratio
+  padding-bottom: 75%;
   border-radius: 8px;
   overflow: hidden;
+  
+  @include desktop-up {
+    order: 2;
+    width: 100%;
+    max-width: 900px; // Larger image container
+    margin: 0 auto;
+    padding-bottom: 50%; // Shorter aspect ratio
+  }
+  
+  @include mobile-only {
+    order: -1;
+    padding-bottom: 60%;
+  }
   
   &::after {
     content: '';
@@ -175,11 +238,6 @@
     bottom: 0;
     background: linear-gradient(180deg, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.05) 100%);
     pointer-events: none;
-  }
-  
-  @include mobile-only {
-    order: -1;
-    padding-bottom: 60%;  // Even shorter on mobile
   }
 }
 
