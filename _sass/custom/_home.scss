@@ -1,58 +1,4 @@
-// Animation keyframes
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-    filter: blur(2px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px) rotate(-1deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px) rotate(1deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotate(0deg);
-  }
-}
-
-@keyframes buttonShine {
-  from {
-    background-position: -100px;
-  }
-  to {
-    background-position: 200px;
-  }
-}
+// Animations removed for static homepage
 
 .hero-section {
   position: relative;
@@ -237,37 +183,12 @@
     font-weight: 500;
     font-size: $font-size-small;
     text-decoration: none;
-    transition: all 0.2s ease;
     text-align: center;
     min-width: 160px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        90deg, 
-        transparent, 
-        rgba(255, 255, 255, 0.2), 
-        transparent
-      );
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
     
     &:hover {
-      transform: translateY(-2px) scale(1.03);
-      
-      &::after {
-        opacity: 1;
-        animation: buttonShine 1.2s ease-out;
-      }
+      opacity: 0.85;
     }
     
     @include desktop-up {
@@ -347,11 +268,6 @@
     object-fit: cover;
     object-position: center;
     filter: contrast(1.1);
-    transition: transform 8s ease-out;
-    
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 }
 
@@ -377,25 +293,7 @@
   border-radius: 12px;
   background: rgba($color-primary, 0.02);
   border: 1px solid rgba($color-primary, 0.08);
-  opacity: 0;
-  transform: scale(0.98);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-  // Animation triggers through JS/Intersection Observer
-  &.animate {
-    animation: scaleIn 600ms ease-out forwards;
-  }
-  
-  // Staggered delays for feature cards
-  &:nth-child(1) { animation-delay: 100ms; }
-  &:nth-child(2) { animation-delay: 250ms; }
-  &:nth-child(3) { animation-delay: 400ms; }
-  &:nth-child(4) { animation-delay: 550ms; }
-  
-  &:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
+  opacity: 1;
   
   @include mobile-only {
     padding: 1.5rem;
@@ -405,8 +303,6 @@
   
   .feature-icon {
     margin-bottom: 1.5rem;
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
     
     svg {
       width: 48px;
@@ -415,10 +311,6 @@
       stroke-width: 1.5;
       fill: none;
     }
-  }
-  
-  &:hover .feature-icon {
-    transform: scale(1.1);
   }
   
   h3 {
@@ -437,55 +329,16 @@
   }
 }
 
-// Featured products animations
+// Static product cards - animations removed
 .featured-products-grid {
   .product-card {
-    opacity: 0;
-    
-    &.animate {
-      animation-duration: 700ms;
-      animation-fill-mode: forwards;
-      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    
-    &:nth-child(odd).animate {
-      animation-name: slideInLeft;
-    }
-    
-    &:nth-child(even).animate {
-      animation-name: slideInRight;
-    }
-    
-    &:nth-child(1) { animation-delay: 100ms; }
-    &:nth-child(2) { animation-delay: 250ms; }
-    &:nth-child(3) { animation-delay: 400ms; }
-    &:nth-child(4) { animation-delay: 550ms; }
-    
-    &:hover {
-      transform: translateY(-8px);
-    }
-    
-    .image-container {
-      overflow: hidden;
-      
-      img {
-        transition: transform 0.5s ease;
-      }
-    }
-    
-    &:hover .image-container img {
-      transform: scale(1.05);
-    }
+    opacity: 1;
   }
 }
 
-// Section title animations
+// Static section titles - animations removed
 .section-title, .section-subtitle {
-  opacity: 0;
-  
-  &.animate {
-    animation: fadeSlideUp 600ms ease-out forwards;
-  }
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

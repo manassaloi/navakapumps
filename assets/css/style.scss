@@ -487,14 +487,9 @@ h4, .feature-card h3 {
     border: 1px solid $color-border;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.2s ease;
     box-shadow: 0 2px 4px $color-shadow;
     display: flex;
     flex-direction: column;
-    
-    &:hover {
-      transform: translateY(-2px);
-    }
     
     .image-container {
       width: 100%;
@@ -1119,16 +1114,9 @@ a {
   }
 }
 
-// Product cards
+// Product cards - animations removed
 .product-card {
-  transition: transform 0.2s ease;
-  
-  &:hover {
-    transform: translateY(-2px);
-  }
-  
   .learn-more {
-    transition: all 0.2s ease;
     border: 1px solid rgba($color-primary, 0.3);
     
     &:hover {
@@ -1138,16 +1126,10 @@ a {
   }
 }
 
-// Featured products
+// Featured products - animations removed
 .featured-products-grid {
   .product-card {
-    &:hover {
-      transform: translateY(-2px);
-    }
-    
     .learn-more {
-      transition: all 0.2s ease;
-      
       &:hover {
         opacity: 0.7;
         border-color: rgba($color-primary, 0.5);
