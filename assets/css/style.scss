@@ -825,7 +825,8 @@ h4, .feature-card h3 {
   }
   
   .featured-products {
-    padding: $space-8 $space-4;
+    padding: $space-8 0;
+    margin: $space-4 0;
     
     .section-title {
       font-size: $font-size-h3;
@@ -839,11 +840,16 @@ h4, .feature-card h3 {
   
   .featured-products-grid {
     grid-template-columns: 1fr;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .product-card {
     padding: $space-4;
     background: $color-background;
+    width: 100%;
+    box-sizing: border-box;
     
     h3 {
       font-size: $font-size-body;
