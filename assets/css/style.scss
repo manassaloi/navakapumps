@@ -471,7 +471,7 @@ h4, .feature-card h3 {
       width: 100%;
       padding-top: 75%;
       position: relative;
-      background: linear-gradient(45deg, darken($color-accent, 5%), $color-accent);
+      background: $color-white;
       border-bottom: 1px solid rgba($color-primary, 0.1);
       
       &::before {
@@ -481,7 +481,7 @@ h4, .feature-card h3 {
         left: $space-4;
         right: $space-4;
         bottom: $space-4;
-        border: 1px solid rgba($color-white, 0.2);
+        border: 1px solid rgba($color-primary, 0.2);
         border-radius: 8px;
       }
       
