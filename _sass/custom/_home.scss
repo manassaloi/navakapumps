@@ -137,7 +137,7 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   
   @include desktop-up {
-    font-size: calc($font-size-h1 * 2);
+    font-size: 84px;
     letter-spacing: -0.02em;
   }
   
@@ -276,7 +276,7 @@
     
     &.primary {
       background: transparent;
-      color: $color-primary;
+      color: #FFFFFF;
       border: 1px solid rgba($color-primary, 0.8);
       
       &:hover {
@@ -287,7 +287,7 @@
     }
     
     &.secondary {
-      background: #d1cfc0;
+      background: #FFFFFF;
       color: #000000 !important;
       border: none;
       font-weight: 500;
@@ -590,7 +590,7 @@
     justify-content: center;
     
     .button.secondary {
-      background: #d1cfc0;
+      background: #FFFFFF;
       color: #000000 !important;
       border: none;
       font-weight: 500;
