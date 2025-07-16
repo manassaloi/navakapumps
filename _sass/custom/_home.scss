@@ -56,9 +56,18 @@
 
 .hero-section {
   position: relative;
-  background: $color-background;
+  background: linear-gradient(
+    90deg,          /* left-to-right sweep */
+    #f8c81a  0%,    /* bright golden yellow */
+    #e39b17 25%,    /* warm honey */
+    #cf7019 40%,    /* burnt orange */
+    #0f9893 75%,    /* deep teal */
+    #32e4de 100%    /* vivid cyan-teal */
+  );
   padding: calc($space-12 * 0.75) 0;
   overflow: hidden;
+  border-radius: 16px;
+  margin: $space-4;
   
   @include desktop-up {
     padding: 6rem 0 6rem;
@@ -122,13 +131,10 @@
   font-size: calc($font-size-h1 * 1.75);
   font-weight: 800;
   line-height: 1.1;
-  color: $color-primary;
+  color: #ffffff !important;
   margin: 0;
   white-space: nowrap;
-  
-  // Animation for title
-  opacity: 0;
-  animation: fadeSlideUp 600ms ease-out forwards;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   
   @include desktop-up {
     font-size: calc($font-size-h1 * 2);
@@ -156,7 +162,6 @@
       height: 0.35rem;
       background: rgba($color-accent, 0.85);
       z-index: -1;
-      animation: scaleIn 800ms ease-out 300ms backwards;
     }
   }
   
@@ -171,16 +176,13 @@
 
 .hero-subtitle {
   font-size: $font-size-h4;
-  color: rgba($color-primary, 0.7);
+  color: #ffffff !important;
   line-height: 1.4;
   margin: 0;
   font-weight: 400;
   max-width: 100%;
   white-space: nowrap;
-  
-  // Animation for subtitle - 200ms delay
-  opacity: 0;
-  animation: fadeSlideUp 600ms ease-out 200ms forwards;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   
   @include desktop-up {
     font-size: calc($font-size-h4 * 1.2);
@@ -200,10 +202,6 @@
   display: flex;
   gap: $space-4;
   margin-top: $space-2;
-  
-  // Animation for buttons - 400ms delay
-  opacity: 0;
-  animation: fadeSlideUp 600ms ease-out 400ms forwards;
   
   @include desktop-up {
     gap: 1.5rem;
@@ -225,7 +223,7 @@
       
       &.secondary {
         background: #d1cfc0;
-        color: #1f1f1f !important;
+        color: #000000 !important;
       }
     }
   }
@@ -290,14 +288,14 @@
     
     &.secondary {
       background: #d1cfc0;
-      color: #1f1f1f !important;
+      color: #000000 !important;
       border: none;
       font-weight: 500;
       
       &:hover {
         opacity: 0.9;
         background: darken(#d1cfc0, 5%);
-        color: #1f1f1f !important;
+        color: #000000 !important;
       }
     }
   }
@@ -310,8 +308,6 @@
   padding-bottom: 75%;
   border-radius: 8px;
   overflow: hidden;
-  opacity: 0;
-  animation: scaleIn 800ms cubic-bezier(0.34, 1.56, 0.64, 1) 600ms forwards;
   
   @include desktop-up {
     order: 2;
@@ -595,7 +591,7 @@
     
     .button.secondary {
       background: #d1cfc0;
-      color: #1f1f1f !important;
+      color: #000000 !important;
       border: none;
       font-weight: 500;
       
@@ -603,7 +599,7 @@
         opacity: 0.9;
         transform: translateY(-1px);
         background: darken(#d1cfc0, 5%);
-        color: #1f1f1f !important;
+        color: #000000 !important;
       }
     }
   }
@@ -652,11 +648,7 @@
   }
 }
 
-// Fix initial visibility of animated elements
-.hero-title,
-.hero-subtitle,
-.hero-buttons,
-.hero-image-wrapper,
+// Fix initial visibility of animated elements (excluding hero section)
 .feature-card,
 .product-card,
 .section-title,
@@ -665,10 +657,6 @@
 }
 
 .js-enabled {
-  .hero-title,
-  .hero-subtitle,
-  .hero-buttons,
-  .hero-image-wrapper,
   .feature-card,
   .product-card,
   .section-title,

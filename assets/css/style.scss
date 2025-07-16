@@ -24,13 +24,13 @@ $spacing-unit:     30px !default;
 $color-primary: #d1cfc0;    // New primary text color
 $color-secondary: #d1cfc0;   // New secondary text color
 $color-accent: #FFB800;      // Keeping accent yellow
-$color-background: #1f1f1f;  // New dark background
+$color-background: #000000;  // New dark background
 $color-success: #28A745;     // Success Green
 $color-error: #DC3545;       // Alert Red
 $color-info: #17A2B8;        // Info Blue
 
 // Common Colors
-$color-white: #1f1f1f;       // Inverting for dark theme
+$color-white: #000000;       // Inverting for dark theme
 $color-border: rgba(209, 207, 192, 0.2);  // Adjusted for dark theme
 $color-shadow: rgba(0, 0, 0, 0.2);        // Adjusted shadow
 
@@ -206,7 +206,7 @@ h4, .feature-card h3 {
 // Header styles
 .site-header {
   border-top: 0;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 0Howpx solid $color-border;
   min-height: auto;
   padding: 0 0;
   background: $color-background;
@@ -432,28 +432,55 @@ h4, .feature-card h3 {
 // Featured Products Section
 .featured-products {
   @extend .container;
-  padding: $space-12 0;
+  padding: $space-12 $space-8;
   text-align: center;
+  background: linear-gradient(270deg, 
+    #f6d365 0%, 
+    #fda085 30%, 
+    #42e695 70%, 
+    #3bb2b8 100%
+  );
+  border-radius: 16px;
+  margin: $space-4 auto;
+  
+  @include tablet-up {
+    padding: $space-12 $space-10;
+    margin: $space-6 auto;
+  }
+  
+  @include desktop-up {
+    padding: $space-12 $space-12;
+    margin: $space-8 auto;
+  }
   
   .section-title {
     font-size: $font-size-h2;
     font-weight: 600;
-    color: $color-primary;
+    color: #ffffff !important;
     margin-bottom: $space-3;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   }
   
   .section-subtitle {
     font-size: $font-size-body;
-    color: $color-primary;
+    color: #ffffff !important;
     margin-bottom: $space-8;
     max-width: $container-content;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
 
 .featured-products-grid {
   @include products-grid;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 $space-4;
+  
+  @include tablet-up {
+    padding: 0 $space-6;
+  }
   
   .product-card {
     background: $color-white;
@@ -738,16 +765,19 @@ h4, .feature-card h3 {
 }
 
 @media (max-width: 1024px) {
-  .hero-section,
   .features-grid,
-  .featured-products,
   .commitment-section,
   .cta-section {
     padding: $space-8 $space-4;
     background: $color-background;
   }
 
+  .featured-products {
+    padding: $space-8 $space-6;
+  }
+
   .hero-section {
+    padding: $space-8 $space-4;
     grid-template-columns: 1fr;
     
     .hero-content {
@@ -795,7 +825,7 @@ h4, .feature-card h3 {
   }
   
   .featured-products {
-    background: $color-background;
+    padding: $space-8 $space-4;
     
     .section-title {
       font-size: $font-size-h3;

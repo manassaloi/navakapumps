@@ -37,13 +37,6 @@ a {
 
 // Add a class to enable JS detection for animations
 .js-enabled {
-  .hero-title,
-  .hero-subtitle,
-  .hero-buttons,
-  .hero-image-wrapper {
-    will-change: opacity, transform;
-  }
-  
   .feature-card,
   .product-card,
   .section-title,
