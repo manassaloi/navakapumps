@@ -489,6 +489,8 @@ h4, .feature-card h3 {
     overflow: hidden;
     transition: transform 0.2s ease;
     box-shadow: 0 2px 4px $color-shadow;
+    display: flex;
+    flex-direction: column;
     
     &:hover {
       transform: translateY(-2px);
@@ -528,6 +530,9 @@ h4, .feature-card h3 {
     .content {
       padding: $space-6;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       
       h3 {
         font-size: $font-size-h4;
@@ -541,6 +546,7 @@ h4, .feature-card h3 {
         color: $color-primary;
         margin-bottom: $space-6;
         line-height: 1.6;
+        flex: 1;
       }
       
       .learn-more {
@@ -552,6 +558,7 @@ h4, .feature-card h3 {
         text-decoration: none;
         font-weight: 500;
         transition: all 0.2s ease;
+        margin-top: auto;
         
         &:hover {
           background: transparent;
