@@ -857,6 +857,11 @@ h4, .feature-card h3 {
   .featured-products {
     padding: $space-8 0;
     margin: $space-4 0;
+    background: #000000 !important;
+    
+    &::after {
+      display: none !important;
+    }
     
     .section-title {
       font-size: $font-size-h3;
