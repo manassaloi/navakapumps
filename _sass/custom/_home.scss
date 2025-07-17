@@ -3,12 +3,12 @@
 .hero-section {
   position: relative;
   background: linear-gradient(
-    90deg,          /* left-to-right sweep */
-    #f8c81a  0%,    /* bright golden yellow */
-    #e39b17 25%,    /* warm honey */
-    #cf7019 40%,    /* burnt orange */
-    #0f9893 75%,    /* deep teal */
-    #32e4de 100%    /* vivid cyan-teal */
+    135deg,
+    #1e3a8a 0%,     /* dark blue */
+    #3730a3 25%,    /* deep purple */
+    #581c87 50%,    /* dark violet */
+    #0f172a 75%,    /* slate-900 */
+    #111827 100%    /* gray-900 */
   );
   padding: calc($space-12 * 0.75) 0;
   overflow: hidden;
@@ -80,7 +80,6 @@
   color: #ffffff !important;
   margin: 0;
   white-space: nowrap;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   
   @include desktop-up {
     font-size: 84px;
@@ -128,7 +127,6 @@
   font-weight: 400;
   max-width: 100%;
   white-space: nowrap;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   
   @include desktop-up {
     font-size: calc($font-size-h4 * 1.2);
