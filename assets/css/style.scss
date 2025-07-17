@@ -435,12 +435,16 @@ h4, .feature-card h3 {
   @extend .container;
   padding: $space-12 $space-8;
   text-align: center;
-  background: linear-gradient(270deg, 
-    #1e40af 0%,     /* blue-800 */
-    #7c3aed 30%,    /* violet-600 */
-    #0f766e 70%,    /* teal-700 */
-    #059669 100%    /* emerald-600 */
-  );
+  position: relative;
+  background: 
+    radial-gradient(ellipse at 20% 30%, #8b7355 0%, transparent 60%),
+    radial-gradient(ellipse at 40% 20%, #d4941e 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 40%, #e67e22 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 60%, #c0392b 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, #8e44ad 0%, transparent 45%),
+    radial-gradient(ellipse at 10% 80%, #6c5ce7 0%, transparent 40%),
+    linear-gradient(135deg, #6b5b73 0%, #b8860b 20%, #cd853f 40%, #d2691e 60%, #c0392b 80%, #8e44ad 100%);
+  background-color: #2c2c34;
   border-radius: 16px;
   margin: $space-4 auto;
   
@@ -452,6 +456,28 @@ h4, .feature-card h3 {
   @include desktop-up {
     padding: $space-12 $space-12;
     margin: $space-8 auto;
+  }
+  
+  /* Add Cursor-style subtle noise animation */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAn0B9sTJelwAAAAASUVORK5CYII=");
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    animation: subtleNoise 8s linear infinite;
+    pointer-events: none;
+    border-radius: 16px;
+  }
+  
+  /* Ensure content is above animation */
+  > * {
+    position: relative;
+    z-index: 1;
   }
   
   .section-title {
