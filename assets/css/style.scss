@@ -31,6 +31,7 @@ $color-info: #17A2B8;        // Info Blue
 
 // Common Colors
 $color-white: #000000;       // Inverting for dark theme
+$color-border-white: #ffffff;  // True white for section borders
 $color-border: rgba(209, 207, 192, 0.2);  // Adjusted for dark theme
 $color-shadow: rgba(0, 0, 0, 0.2);        // Adjusted shadow
 
@@ -393,8 +394,8 @@ h4, .feature-card h3 {
   .feature-card {
     background: lighten($color-background, 3%);
     padding: $space-6;
-    border-radius: 8px;
-    border: 1px solid $color-border;
+    border-radius: 16px;
+    border: 2px solid $color-border-white;
     box-shadow: 0 1px 2px $color-shadow;
     
     .feature-icon {
@@ -572,6 +573,8 @@ h4, .feature-card h3 {
   text-align: center;
   max-width: $container-max;
   margin: 0 auto;
+  border: 2px solid $color-border-white;
+  border-radius: 16px;
   
   .section-title {
     font-size: $font-size-h2;
@@ -645,7 +648,8 @@ h4, .feature-card h3 {
   padding: $space-10 $space-6;
   text-align: center;
   background: lighten($color-background, 5%);
-  border-radius: 8px;
+  border: 2px solid $color-border-white;
+  border-radius: 16px;
   margin: $space-8 auto;
   max-width: $container-content;
   

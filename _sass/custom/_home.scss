@@ -290,9 +290,9 @@
 
 .feature-card {
   padding: 2.5rem;
-  border-radius: 12px;
+  border-radius: 16px;
   background: rgba($color-primary, 0.02);
-  border: 1px solid rgba($color-primary, 0.08);
+  border: 2px solid #ffffff;
   opacity: 1;
   
   @include mobile-only {
@@ -422,7 +422,8 @@
   padding: $space-10 $space-6;
   text-align: center;
   background: lighten($color-background, 5%);
-  border-radius: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 16px;
   margin: $space-8 auto;
   max-width: $container-content;
   
