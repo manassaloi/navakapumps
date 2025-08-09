@@ -9,38 +9,67 @@
       window.location.protocol = "https";
   </script>
   {% endif %}
+  <!-- Preconnect to external domains for faster loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="{{ "/assets/css/style.css" | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}"></noscript>
+  
+  <!-- Load fonts with display=swap for better performance -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
   {%- seo -%}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.png">
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/favicon.png">
   {%- feed_meta -%}
-  <!-- Animation functionality for scroll-triggered animations -->
-  <script>
+  
+  <!-- Performance optimizations -->
+  <script defer src="{{ "/assets/js/performance.js" | relative_url }}"></script>
+  
+  <!-- Optimized animation functionality for scroll-triggered animations -->
+  <script defer>
     document.addEventListener('DOMContentLoaded', function() {
       // Add js-enabled class to body
       document.body.classList.add('js-enabled');
       
-      // Setup Intersection Observer for scroll animations
-      const animationObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate');
-              observer.unobserve(entry.target); // Only animate once
-            }
-          });
-        },
-        { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
-      );
+      // Use requestIdleCallback for better performance
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initAnimations);
+      } else {
+        setTimeout(initAnimations, 100);
+      }
       
-      // Observe all elements that should animate on scroll
-      document.querySelectorAll('.feature-card, .product-card, .section-title, .section-subtitle').forEach(
-        el => animationObserver.observe(el)
-      );
+      function initAnimations() {
+        // Only setup animations if user prefers motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+        
+        // Setup Intersection Observer for scroll animations with optimized settings
+        const animationObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target); // Only animate once
+              }
+            });
+          },
+          { 
+            threshold: 0.1, 
+            rootMargin: '0px 0px -25px 0px',
+            // Add passive option for better performance
+            passive: true
+          }
+        );
+        
+        // Observe all elements that should animate on scroll - batch DOM queries
+        const elementsToAnimate = document.querySelectorAll('.feature-card, .product-card, .section-title, .section-subtitle');
+        elementsToAnimate.forEach(el => animationObserver.observe(el));
+      }
     });
   </script>
 </head>

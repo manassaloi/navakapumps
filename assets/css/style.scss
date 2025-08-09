@@ -207,7 +207,7 @@ h4, .feature-card h3 {
 // Header styles
 .site-header {
   border-top: 0;
-  border-bottom: 0Howpx solid $color-border;
+  border-bottom: 0px solid $color-border;
   min-height: auto;
   padding: 0 0;
   background: $color-background;
@@ -1025,6 +1025,16 @@ h4, .feature-card h3 {
     height: auto;
     border-radius: 8px;
     margin: $space-4 0;
+    
+    // Lazy loading optimization
+    &[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      
+      &.loaded {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -1167,6 +1177,26 @@ a {
         opacity: 0.7;
         border-color: rgba($color-primary, 0.5);
       }
+    }
+  }
+}
+
+// Product image optimization
+.product-image {
+  display: block;
+  width: 100%;
+  margin: $space-4 0;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    
+    &[loading="lazy"] {
+      background: lighten($color-background, 5%);
+      min-height: 200px;
     }
   }
 }

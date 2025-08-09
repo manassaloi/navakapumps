@@ -1,0 +1,26 @@
+{% comment %}
+Product Image Include - Optimized with lazy loading
+Usage: {% include product-image.html src="/assets/img/image.jpg" alt="Description" title="Title" %}
+{% endcomment %}
+
+{% assign src = include.src %}
+{% assign alt = include.alt | default: "" %}
+{% assign title = include.title | default: "" %}
+{% assign loading = include.loading | default: "lazy" %}
+
+<picture class="product-image">
+  {% comment %}Try to serve WebP version if available{% endcomment %}
+  {% assign webp_src = src | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
+  <source srcset="{{ site.baseurl }}{{ webp_src }}" type="image/webp">
+  
+  <img 
+    src="{{ site.baseurl }}{{ src }}" 
+    alt="{{ alt }}"
+    {% if title != "" %}title="{{ title }}"{% endif %}
+    loading="{{ loading }}"
+    decoding="async"
+    width="600"
+    height="400"
+    style="max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0;"
+  >
+</picture>
