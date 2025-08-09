@@ -13,13 +13,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- Preload critical CSS -->
-  <link rel="preload" href="{{ "/assets/css/style.css" | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}"></noscript>
+  <!-- Immediate CSS loading (no FOUC) + preload for caching -->
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="preload" href="{{ "/assets/css/style.css" | relative_url }}" as="style">
   
-  <!-- Load fonts with display=swap for better performance -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+
+  
+  <!-- Load fonts with display=swap (simplified to avoid FOUC) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
   {%- seo -%}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.png">
