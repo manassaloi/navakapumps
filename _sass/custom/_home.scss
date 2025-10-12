@@ -149,7 +149,7 @@
   }
   
   @include tablet-up {
-    font-size: clamp(2rem, 5vw, calc($font-size-h1 * 1.5));
+    font-size: clamp(2rem, 5vw, 4.5rem);
     white-space: nowrap;
     text-align: center;
   }
@@ -191,7 +191,7 @@
   }
   
   @include tablet-up {
-    font-size: clamp(1rem, 2.5vw, $font-size-h4);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     white-space: nowrap;
     text-align: center;
   }
