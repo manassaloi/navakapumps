@@ -82,6 +82,15 @@
     max-width: 1400px;
   }
 
+  @include tablet-up {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+    text-align: center;
+    padding: 0 $space-4;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   @include mobile-only {
     grid-template-columns: 1fr;
     gap: $space-6;
@@ -104,6 +113,15 @@
     max-width: 800px;
     margin: 0 auto;
     gap: 1.5rem;
+  }
+  
+  @include tablet-up {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 1.25rem;
   }
 }
 
@@ -128,6 +146,12 @@
   @include desktop-up {
     font-size: 84px;
     letter-spacing: -0.02em;
+  }
+  
+  @include tablet-up {
+    font-size: clamp(2rem, 5vw, calc($font-size-h1 * 1.5));
+    white-space: nowrap;
+    text-align: center;
   }
   
   @include mobile-only {
@@ -166,6 +190,12 @@
     line-height: 1.6;
   }
   
+  @include tablet-up {
+    font-size: clamp(1rem, 2.5vw, $font-size-h4);
+    white-space: nowrap;
+    text-align: center;
+  }
+  
   @include mobile-only {
     font-size: $font-size-body;
     margin: 0 auto;
@@ -182,6 +212,12 @@
   
   @include desktop-up {
     gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  @include tablet-up {
+    justify-content: center;
+    gap: 1rem;
     margin-top: 1.5rem;
   }
   
