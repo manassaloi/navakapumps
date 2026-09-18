@@ -53,16 +53,13 @@ a:focus-visible { outline:2px solid var(--coral); outline-offset:5px; }
 .footer a:hover { color:var(--coral); text-decoration:underline; text-underline-offset:4px; }
 .product-card:focus-visible { outline-offset:4px; }
 /* Short, interruptible pointer feedback; keyboard focus remains immediate. */
-.button,.product-card { transition:transform 160ms var(--ease-out); }
+.button { transition:transform 160ms var(--ease-out); }
 .button:hover { transform:none; }
-.product-card:hover .image-container img { transform:none; }
 .image-container img { transition:transform 220ms var(--ease-out); }
 @media (hover:hover) and (pointer:fine) {
  .button:hover { transform:translateY(-1px); }
- .product-card:hover { transform:translateY(-3px); }
- .product-card:hover .image-container img { transform:translateY(-3px); }
 }
-.button:active:not(:focus-visible),.product-card:active:not(:focus-visible) { transform:scale(.985); }
+.button:active:not(:focus-visible) { transform:scale(.985); }
 body.keyboard-input *,body.keyboard-input *::before,body.keyboard-input *::after { transition:none !important; animation:none !important; }
 @media (max-width:900px) {
  .products-layout { grid-template-columns:180px minmax(0,1fr); gap:32px; }
@@ -87,5 +84,5 @@ body.keyboard-input *,body.keyboard-input *::before,body.keyboard-input *::after
 }
 @media (prefers-reduced-motion:reduce) {
  *,*::before,*::after { animation:none !important; transition:none !important; }
- .button:hover,.button:active,.product-card:hover,.product-card:active,.product-card:hover .image-container img { transform:none; }
+ .button:hover,.button:active { transform:none; }
 }
