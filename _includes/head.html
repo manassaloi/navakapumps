@@ -9,69 +9,18 @@
       window.location.protocol = "https";
   </script>
   {% endif %}
-  <!-- Preconnect to external domains for faster loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Immediate CSS loading (no FOUC) + preload for caching -->
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-  <link rel="preload" href="{{ "/assets/css/style.css" | relative_url }}" as="style">
-  
-
-  
-  <!-- Load fonts with display=swap (simplified to avoid FOUC) -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="{{ '/assets/fonts/Aileron-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/interior.css' | relative_url }}">
   {%- seo -%}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.png">
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/favicon.png">
   {%- feed_meta -%}
   
-  <!-- Performance optimizations -->
-  <script defer src="{{ "/assets/js/performance.js" | relative_url }}"></script>
-  
-  <!-- Optimized animation functionality for scroll-triggered animations -->
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add js-enabled class to body
-      document.body.classList.add('js-enabled');
-      
-      // Use requestIdleCallback for better performance
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(initAnimations);
-      } else {
-        setTimeout(initAnimations, 100);
-      }
-      
-      function initAnimations() {
-        // Only setup animations if user prefers motion
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          return;
-        }
-        
-        // Setup Intersection Observer for scroll animations with optimized settings
-        const animationObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                observer.unobserve(entry.target); // Only animate once
-              }
-            });
-          },
-          { 
-            threshold: 0.1, 
-            rootMargin: '0px 0px -25px 0px',
-            // Add passive option for better performance
-            passive: true
-          }
-        );
-        
-        // Observe all elements that should animate on scroll - batch DOM queries
-        const elementsToAnimate = document.querySelectorAll('.feature-card, .product-card, .section-title, .section-subtitle');
-        elementsToAnimate.forEach(el => animationObserver.observe(el));
-      }
-    });
-  </script>
+  <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  {% if page.layout == 'indexpage' %}
+  <script type="module" src="{{ '/assets/js/hero-loader.js' | relative_url }}"></script>
+  <script type="module" src="{{ '/assets/js/product-models.js' | relative_url }}"></script>
+  {% endif %}
 </head>

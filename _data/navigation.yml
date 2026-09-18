@@ -1,7 +1,6 @@
-- title: Home
-  url: /
-- title: Products and Services
+- title: Products
   url: /products/
-
-
-
+- title: About
+  url: /aboutus/
+- title: Contact
+  url: /contact/

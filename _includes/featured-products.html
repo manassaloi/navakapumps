@@ -3,8 +3,9 @@
   <p class="section-subtitle">Discover our range of high-quality industrial pumps and equipment</p>
   <div class="featured-products-grid">
     {% for product in site.data.featured_products %}
-      <div class="product-card">
+      <a class="product-card" href="{{ site.baseurl }}/products/#{{ product.name | slugify }}" aria-labelledby="featured-{{ forloop.index }}">
         <div class="image-container">
+          <div class="product-model" data-product-model="{{ forloop.index0 }}" aria-hidden="true">
           <picture>
             <source 
               srcset="{{ site.baseurl }}{{ product.image | replace: '.jpg', '.webp' }}"
@@ -17,13 +18,14 @@
               height="300"
               decoding="async">
           </picture>
+          </div>
         </div>
         <div class="content">
-          <h3>{{ product.name }}</h3>
+          <h3 id="featured-{{ forloop.index }}">{{ product.name }}</h3>
           <p>{{ product.description }}</p>
-          <a href="{{ site.baseurl }}/products#{{ product.name | slugify }}" class="learn-more">Learn More</a>
+          <span class="learn-more">Learn More</span>
         </div>
-      </div>
+      </a>
     {% endfor %}
   </div>
 </section> 

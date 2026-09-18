@@ -8,19 +8,19 @@ permalink: /products/
 
 Navaka acts as a single source point for all types of industrial pumps. Navaka pumps is also a channel partner for CRI industrial pumps, leak proof pumps, rotodel gear pumps and rotodel lobe pumps.
 
-#### [CRI Industrial Pumps]({{ site.baseurl }}/products/cri-industrial-pumps)
+#### [CRI Industrial Pumps]({{ site.baseurl }}/products/cri-industrial-pumps/)
 Advanced pumping solutions for various industrial applications, including water treatment, chemical processing, pharmaceuticals, and more. Our CRI pumps combine efficiency with durability for optimal performance.
 
-#### [Leak Proof Pumps]({{ site.baseurl }}/products/leak-proof-pumps)
+#### [Leak Proof Pumps]({{ site.baseurl }}/products/leak-proof-pumps/)
 Specialized pumps designed for handling corrosive fluids and demanding industrial applications. Available in multiple series including PPE, RD, PPM, and VPP, offering solutions for different operational needs.
 
-#### [Navaka PC Pumps]({{ site.baseurl }}/products/pc-pumps)
+#### [Navaka PC Pumps]({{ site.baseurl }}/products/pc-pumps/)
 High-performance pumps available in various configurations including horizontal external bearing, vertical, and positive displacement pumps. Ideal for industries ranging from oil & gas to food & beverage.
 
-#### [Rotodel Gear Pumps]({{ site.baseurl }}/products/rotodel-gear-pumps)
+#### [Rotodel Gear Pumps]({{ site.baseurl }}/products/rotodel-gear-pumps/)
 Advanced twin vertical gear pumps for all viscous media.
 
-#### [Rotodel Lobe Pumps]({{ site.baseurl }}/products/rotodel-lobe-pumps)
+#### [Rotodel Lobe Pumps]({{ site.baseurl }}/products/rotodel-lobe-pumps/)
 Fully hygenic food application lobe pumps.
 
 #### Why choose Navaka Pumps?

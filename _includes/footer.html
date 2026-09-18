@@ -6,23 +6,24 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__column">
-        <h2 class="footer__heading">{{ about.title }}</h2>
+        <h2 class="footer__heading"><a href="{{ "/aboutus/" | relative_url }}">{{ about.title }}</a></h2>
         <p class="footer__text">{{ about.description }}</p>
       </div>
 
       <div class="footer__column">
-        <h2 class="footer__heading">{{ products.title }}</h2>
+        <h2 class="footer__heading"><a href="{{ "/products/" | relative_url }}">{{ products.title }}</a></h2>
         <ul class="footer__list">
           {% for item in products.items %}
-            <li class="footer__list-item">{{ item }}</li>
+            {% assign product_paths = '/products/cri-industrial-pumps/,/products/pc-pumps/,/products/rotodel-gear-pumps/,/products/rotodel-lobe-pumps/,/products/leak-proof-pumps/' | split: ',' %}
+            <li class="footer__list-item"><a href="{{ product_paths[forloop.index0] | relative_url }}">{{ item }}</a></li>
           {% endfor %}
         </ul>
       </div>
 
       <div class="footer__column">
-        <h2 class="footer__heading">{{ contact.title }}</h2>
-        <p class="footer__text">Email: {{ contact.email }}</p>
-        <p class="footer__text">Phone: {{ contact.phone }}</p>
+        <h2 class="footer__heading"><a href="{{ "/contact/" | relative_url }}">{{ contact.title }}</a></h2>
+        <p class="footer__text">Email: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+        <p class="footer__text">Phone: <a href="tel:{{ contact.phone | remove: ' ' }}">{{ contact.phone }}</a></p>
         <p class="footer__text">{{ contact.location }}</p>
       </div>
     </div>

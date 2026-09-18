@@ -1,21 +1,27 @@
 ---
 layout: default
 ---
-{% comment %}Hero image will load naturally via CSS background{% endcomment %}
+{% comment %}Help industrial buyers find products and contact sales; 3D is supporting imagery.{% endcomment %}
 
 <section class="hero-section">
   <div class="hero-container">
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="hero-title">
-          Navaka is<span class="emphasis">Excellence,</span>Engineered
+          <span class="hero-line">Navaka is <span class="emphasis">Excellence,</span></span><span class="hero-line">Engineered</span>
         </h1>
         <p class="hero-subtitle">Driving Industrial Efficiency with Reliable Pump Solutions.</p>
       </div>
       <div class="hero-buttons">
-        <a href="{{ site.baseurl }}/products" class="button primary">Explore Products →</a>
-        <a href="{{ site.baseurl }}/contact" class="button secondary">Contact Sales</a>
+        <a href="{{ site.baseurl }}/products/" class="button primary">Explore Products →</a>
+        <a href="{{ site.baseurl }}/contact/" class="button secondary">Contact Sales</a>
       </div>
+    </div>
+  </div>
+  <noscript><style>.hero-pump .pump-fallback { visibility:visible; }</style></noscript>
+  <div class="hero-pump" data-pump-viewer aria-hidden="true">
+    <div class="pump-viewport">
+      <img class="pump-fallback" src="{{ '/assets/img/pump_transparent.png' | relative_url }}" alt="" width="740" height="944">
     </div>
   </div>
 </section>
