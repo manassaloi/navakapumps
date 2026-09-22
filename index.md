@@ -13,6 +13,8 @@ Navaka Pumps India, based in Coimbatore, provides pumping solutions to both dome
 
 We are the authorized dealer for Navaka PC Pumps, CRI-Tuff range of pumps. Rotodel Gear Pumps and Leakproof Chemical pumps.
 
+Our product basket also includes [Vithram hygienic-duty rotary lobe and twin screw pumps]({{ '/products/vithram-hygienic-pumps/' | relative_url }}), offered through our business association with Vithram India.
+
 Our commitment:
 
 1. We are committed to delivering top-quality products through rigorous testing, meticulously overseen by our quality control experts.

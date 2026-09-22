@@ -8,9 +8,11 @@ permalink: /products/leak-proof-pumps/
 
 Navaka India offers a comprehensive range of leak-proof pumps designed for handling corrosive fluids and demanding industrial applications. Our pumps are engineered for reliability, durability, and superior performance in challenging environments.
 
-![Leak Proof Pump – Front View](/assets/img/leak1.jpg "Leak Proof Pump Front View")
-![Leak Proof Pump – Side View](/assets/img/leak2.jpg "Leak Proof Pump Side View")
-![Leak Proof Pump – Operation](/assets/img/leak3.jpg "Leak Proof Pump in Operation")
+![Leak-Proof PPE series chemical pump]({{ '/assets/img/leak1.jpg' | relative_url }})
+![Leak-Proof RD series back-pull-out chemical pump]({{ '/assets/img/leak2.jpg' | relative_url }})
+![Leak-Proof chemical pump and motor assembly]({{ '/assets/img/leak3.jpg' | relative_url }})
+
+*PPE series, RD series and a pump with motor assembly. These are different configurations, not multiple views of one pump.*
 
 **Our Range of Leak Proof Pumps:**
 

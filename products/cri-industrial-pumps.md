@@ -8,9 +8,9 @@ permalink: /products/cri-industrial-pumps/
 
 Navaka India is a trusted supplier of CRI industrial pumps, offering a wide range of high-quality and reliable pumping solutions for various industrial applications. With years of experience and a commitment to customer satisfaction, we provide top-notch products and services to meet your specific pumping needs.
 
-![CRI Industrial Pumps – Model 1](/assets/img/cri1.jpg "CRI Industrial Pumps Model 1")
-![CRI Industrial Pumps – Model 2](/assets/img/cri2.jpg "CRI Industrial Pumps Model 2")
-![CRI Industrial Pumps – Close Up](/assets/img/cri3.jpg "Close-up of CRI Industrial Pumps")
+![CRI industrial centrifugal pump](/assets/img/cri1.jpg)
+![CRI vertical multistage pump](/assets/img/cri2.jpg)
+![CRI horizontal centrifugal pump](/assets/img/cri3.jpg)
 
 **Why Choose CRI Industrial Pumps?**
 

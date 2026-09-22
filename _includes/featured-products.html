@@ -1,15 +1,13 @@
-<section class="featured-products">
+<section class="featured-products" data-product-carousel aria-roledescription="carousel" aria-label="Product categories">
   <h2 class="section-title">Featured Products</h2>
   <p class="section-subtitle">Discover our range of high-quality industrial pumps and equipment</p>
-  <div class="featured-products-grid">
+  <div class="featured-products-grid" id="product-carousel-track">
     {% for product in site.data.featured_products %}
-      <a class="product-card" href="{{ site.baseurl }}/products/#{{ product.name | slugify }}" aria-labelledby="featured-{{ forloop.index }}">
+      <a class="product-card" href="{% if product.url %}{{ product.url | relative_url }}{% else %}{{ site.baseurl }}/products/#{{ product.name | slugify }}{% endif %}" aria-labelledby="featured-{{ forloop.index }}">
         <div class="image-container">
-          <div class="product-model" data-product-model="{{ forloop.index0 }}" aria-hidden="true">
+          <div class="product-model" {% if product.model != nil %}data-product-model="{{ product.model }}" aria-hidden="true"{% endif %}>
           <picture>
-            <source 
-              srcset="{{ site.baseurl }}{{ product.image | replace: '.jpg', '.webp' }}"
-              type="image/webp">
+
             <img 
               loading="lazy" 
               src="{{ site.baseurl }}{{ product.image }}" 
@@ -28,4 +26,8 @@
       </a>
     {% endfor %}
   </div>
-</section> 
+  <div class="carousel-controls" hidden>
+    <button type="button" data-carousel-prev aria-label="Previous products" aria-controls="product-carousel-track">←</button>
+    <button type="button" data-carousel-next aria-label="Next products" aria-controls="product-carousel-track">→</button>
+  </div>
+</section>

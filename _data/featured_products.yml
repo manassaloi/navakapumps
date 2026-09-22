@@ -1,11 +1,33 @@
 - name: CRI Industrial Pumps
   image: /assets/img/products-range1.jpg
-  description: High-quality industrial pumps for various applications
-  
+  url: /products/cri-industrial-pumps/
+  model: 0
+  description: Industrial pumping solutions for water treatment and process applications
+
 - name: Navaka PC Pumps
   image: /assets/img/products-range2.jpg
-  description: Durable and flexible hoses for industrial use
-  
+  url: /products/pc-pumps/
+  model: 1
+  description: Progressive cavity pumps for viscous fluids and demanding transfer duties
+
 - name: Rotodel Gear Pumps
   image: /assets/img/products-range3.jpg
-  description: Reliable and efficient gear pumps for handling a wide range of viscous fluids
+  url: /products/rotodel-gear-pumps/
+  model: 2
+  description: Reliable gear pumps for handling a wide range of viscous fluids
+
+- name: Vithram Hygienic Pumps
+  image: /assets/img/vithram-vmv-twin-screw-pump.jpg
+  url: /products/vithram-hygienic-pumps/
+  description: Hygienic rotary lobe and twin screw pumps for gentle product handling
+
+- name: Leak Proof Pumps
+  image: /assets/img/leak1.jpg
+  url: /products/leak-proof-pumps/
+  description: Chemical transfer pumps for corrosive fluids and demanding processes
+
+- name: Rotodel Lobe Pumps
+  image: /assets/img/rotodel-rlp-lobe-pump.jpg
+  # Source: Rotodel brochure, TYPE RLP, https://www.rtechtrading.com/product-brochure.pdf
+  url: /products/rotodel-lobe-pumps/
+  description: Explore the Rotodel range and discuss your application with our team
