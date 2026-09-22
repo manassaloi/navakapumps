@@ -14,7 +14,7 @@
         <h2 class="footer__heading"><a href="{{ "/products/" | relative_url }}">{{ products.title }}</a></h2>
         <ul class="footer__list">
           {% for item in products.items %}
-            {% assign product_paths = '/products/cri-industrial-pumps/,/products/pc-pumps/,/products/rotodel-gear-pumps/,/products/rotodel-lobe-pumps/,/products/leak-proof-pumps/,/products/vithram-hygienic-pumps/' | split: ',' %}
+            {% assign product_paths = '/products/cri-industrial-pumps/,/products/pc-pumps/,/products/rotodel-gear-pumps/,/products/leak-proof-pumps/,/products/vithram-hygienic-pumps/' | split: ',' %}
             <li class="footer__list-item"><a href="{{ product_paths[forloop.index0] | relative_url }}">{{ item }}</a></li>
           {% endfor %}
         </ul>

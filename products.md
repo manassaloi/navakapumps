@@ -6,7 +6,7 @@ permalink: /products/
 
 ## Our Product Range
 
-Navaka acts as a single source point for all types of industrial pumps. Navaka pumps is also a channel partner for CRI industrial pumps, leak proof pumps, rotodel gear pumps and rotodel lobe pumps. Through our business association with Vithram India, we also offer hygienic-duty rotary lobe and twin screw pumps.
+Navaka acts as a single source point for all types of industrial pumps. Navaka pumps is also a channel partner for CRI industrial pumps, leak proof pumps and rotodel gear pumps. Through our business association with Vithram India, we also offer hygienic-duty rotary lobe and twin screw pumps.
 
 #### [CRI Industrial Pumps]({{ site.baseurl }}/products/cri-industrial-pumps/)
 Advanced pumping solutions for various industrial applications, including water treatment, chemical processing, pharmaceuticals, and more. Our CRI pumps combine efficiency with durability for optimal performance.
@@ -19,9 +19,6 @@ High-performance pumps available in various configurations including horizontal 
 
 #### [Rotodel Gear Pumps]({{ site.baseurl }}/products/rotodel-gear-pumps/)
 Advanced twin vertical gear pumps for all viscous media.
-
-#### [Rotodel Lobe Pumps]({{ site.baseurl }}/products/rotodel-lobe-pumps/)
-Fully hygenic food application lobe pumps.
 
 #### [Vithram Hygienic Pumps]({{ site.baseurl }}/products/vithram-hygienic-pumps/)
 Hygienic-duty VVR rotary lobe and VMV twin screw pumps for gentle handling of viscous and shear-sensitive products.
