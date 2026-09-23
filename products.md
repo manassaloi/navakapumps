@@ -27,7 +27,7 @@ Hygienic-duty VVR rotary lobe and VMV twin screw pumps for gentle handling of vi
 
 * **One stop solution for all your pumping requirements:** We deliver quality industrial pumps provided by reputed manufacturers.
 * **Comprehensive Support:** Expert technical assistance and after-sales service.
-* **Wide Application Range:** Solutions for diverse industrial and agricultural needs.
+* **Wide Application Range:** Solutions for diverse industrial applications.
 * **Innovation:** Latest technology and advanced features across our product range.
 * **Reliability:** Robust construction and proven performance.
 * **Cost-Effectiveness:** Optimal balance of quality and value.

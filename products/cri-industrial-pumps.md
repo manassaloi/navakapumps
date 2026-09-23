@@ -24,7 +24,6 @@ CRI Pumps is a renowned manufacturer known for its innovative and efficient pump
     * Pharmaceuticals
     * Food and Beverage
     * Power Generation
-    * Irrigation
     * And many more
 * **Advanced Technology:** CRI incorporates cutting-edge technology in its pump designs, ensuring superior performance and efficiency.
 * **Excellent After-Sales Service:** CRI and Navaka India provide comprehensive after-sales support, including maintenance, repairs, and spare parts availability.
@@ -63,7 +62,6 @@ CRI industrial pumps find applications in a wide array of industries and process
 * **Pharmaceutical Industries:** For hygienic and precise fluid transfer.
 * **Food and Beverage Industries:** For transferring liquids, syrups, and other food-grade materials.
 * **Power Plants:** For cooling water circulation and boiler feed applications.
-* **Irrigation Systems:** For efficient water distribution in agricultural settings.
 * **Mining Industries:** For dewatering and slurry handling.
 * **Oil and Gas Industries:** For various fluid transfer applications.
 
