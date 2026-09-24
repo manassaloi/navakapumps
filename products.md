@@ -1,6 +1,8 @@
 ---
 layout: productpage
-title: Products
+title: Industrial Pump Range
+heading: Products
+description: "Industrial pumps from Navaka, Coimbatore: CRI centrifugal, Leak Proof chemical, Navaka PC progressive cavity, Rotodel gear and Vithram hygienic pumps."
 permalink: /products/
 ---
 

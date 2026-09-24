@@ -1,27 +1,27 @@
 - name: CRI Industrial Pumps
-  image: /assets/img/products-range1.jpg
+  image: /assets/img/products-range1.webp
   url: /products/cri-industrial-pumps/
   model: 0
   description: Industrial pumping solutions for water treatment and process applications
 
 - name: Navaka PC Pumps
-  image: /assets/img/products-range2.jpg
+  image: /assets/img/products-range2.webp
   url: /products/pc-pumps/
   model: 1
   description: Progressive cavity pumps for viscous fluids and demanding transfer duties
 
 - name: Rotodel Gear Pumps
-  image: /assets/img/products-range3.jpg
+  image: /assets/img/products-range3.webp
   url: /products/rotodel-gear-pumps/
   model: 2
   description: Reliable gear pumps for handling a wide range of viscous fluids
 
 - name: Vithram Hygienic Pumps
-  image: /assets/img/vithram-vmv-twin-screw-pump.jpg
+  image: /assets/img/vithram-vmv-twin-screw-pump.webp
   url: /products/vithram-hygienic-pumps/
   description: Hygienic rotary lobe and twin screw pumps for gentle product handling
 
 - name: Leak Proof Pumps
-  image: /assets/img/leak1.jpg
+  image: /assets/img/leak1.webp
   url: /products/leak-proof-pumps/
   description: Chemical transfer pumps for corrosive fluids and demanding processes

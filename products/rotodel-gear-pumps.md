@@ -1,13 +1,15 @@
 ---
 layout: productpage
-title: Rotodel Gear Pumps
+title: Rotodel Gear Pumps Dealer in Coimbatore
+heading: Rotodel Gear Pumps
+description: Rotodel rotary gear pumps, including HGN and HGBX series, for oils and other viscous fluids. Navaka, Coimbatore helps with model, seal and drive selection.
 permalink: /products/rotodel-gear-pumps/
 ---
 
 Navaka India supplies Rotodel rotary gear pumps for viscous-fluid transfer and industrial process applications.
 
-![Rotodel HGN general-purpose rotary gear pump]({{ '/assets/img/rotodel-hgn-gear-pump.jpg' | relative_url }})
-![Rotodel HGBX rotary gear pump]({{ '/assets/img/rotodel-hgbx-gear-pump.jpg' | relative_url }})
+![Rotodel HGN general-purpose rotary gear pump]({{ '/assets/img/rotodel-hgn-gear-pump.webp' | relative_url }})
+![Rotodel HGBX rotary gear pump]({{ '/assets/img/rotodel-hgbx-gear-pump.webp' | relative_url }})
 
 *Left: HGN general-purpose gear pump. Right: HGBX rotary gear pump for OEM applications.*
 

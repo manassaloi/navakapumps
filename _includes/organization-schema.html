@@ -1,0 +1,23 @@
+{% comment %}Business details for search engines (schema.org Organization), shown on the home page only.{% endcomment %}
+{%- assign contact = site.data.footer.contact -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": {{ '/#organization' | absolute_url | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "alternateName": "Navaka India",
+  "url": {{ '/' | absolute_url | jsonify }},
+  "logo": {{ site.logo | absolute_url | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "foundingDate": "2016",
+  "email": {{ contact.email | jsonify }},
+  "telephone": {{ contact.phone | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  }
+}
+</script>

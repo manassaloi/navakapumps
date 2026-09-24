@@ -29,5 +29,5 @@
       animation.onfinish = animation.oncancel = () => running.delete(animation);
     });
   }, { threshold:0.12 });
-  document.querySelectorAll('.hero-content,.featured-products-grid,.commitment-list,.cta-section,.products-header,.contact-card,.post-header').forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero-content,.intro-copy,.featured-products-grid,.commitment-list,.cta-section,.products-header,.contact-card,.post-header').forEach(el => observer.observe(el));
 })();

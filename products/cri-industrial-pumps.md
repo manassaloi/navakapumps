@@ -1,6 +1,8 @@
 ---
 layout: productpage
-title: CRI Industrial Pumps
+title: CRI Industrial Pumps Dealer in Coimbatore
+heading: CRI Industrial Pumps
+description: Authorized CRI pump distributor in Coimbatore. End suction, multistage, split case, slurry and submersible pumps for water, chemical and power plants.
 permalink: /products/cri-industrial-pumps/
 ---
 
@@ -8,9 +10,9 @@ permalink: /products/cri-industrial-pumps/
 
 Navaka India is a trusted supplier of CRI industrial pumps, offering a wide range of high-quality and reliable pumping solutions for various industrial applications. With years of experience and a commitment to customer satisfaction, we provide top-notch products and services to meet your specific pumping needs.
 
-![CRI industrial centrifugal pump](/assets/img/cri1.jpg)
-![CRI vertical multistage pump](/assets/img/cri2.jpg)
-![CRI horizontal centrifugal pump](/assets/img/cri3.jpg)
+![CRI industrial centrifugal pump](/assets/img/cri1.webp)
+![CRI vertical multistage pump](/assets/img/cri2.webp)
+![CRI horizontal centrifugal pump](/assets/img/cri3.webp)
 
 **Why Choose CRI Industrial Pumps?**
 

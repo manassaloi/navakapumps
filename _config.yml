@@ -15,16 +15,25 @@
 # in the templates via {{ site.myvariable }}.
 title: Navaka Pumps
 # email: your-email@example.com
-description: Navaka, based in Coimbatore, India, is a reputed trading house and exporter of various industrial products. We provide pumping solutions to both domestic and international clients. We strive to render industrial products that are known for their reliability, quality, efficiency and standards. Our range mainly includes industrial pumps, flexible hose, strainers, filters, etc.
+# Fallback meta description; pages set their own `description` (keep under ~155 characters).
+description: Navaka Pumps, Coimbatore, is a trading house and exporter of industrial pumps, including CRI, Rotodel, Leakproof, Navaka PC and Vithram pumps.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://navakapumps.com" # the base hostname & protocol for your site
 enforce_ssl: navakapumps.com   # force HTTPS
+locale: en_IN
+logo: /assets/img/navaka-logo.png
 
+# SEO: `title` sets the browser/search title; `heading` (optional) overrides the visible page heading.
 defaults:
   - scope:
       path: ""
     values:
-      image: https://navakapumps.com/assets/img/navaka.png
+      image: /assets/img/navaka-social.png
+  # Keep images and the old catalogue PDFs out of the sitemap.
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
 
 
 # Build settings
@@ -33,19 +42,20 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  # - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude from processing (internal notes and tooling should not be published).
+exclude:
+  - DESIGN.md
+  - README.md
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 compress_html:
   clippings: all

@@ -15,7 +15,7 @@ layout: default
   <!-- Main Content -->
   <article class="products-content">
     <header class="products-header">
-      <h1 class="page-heading">{{ page.title }}</h1>
+      <h1 class="page-heading">{{ page.heading | default: page.title }}</h1>
     </header>
 
     <div class="products-body">

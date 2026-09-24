@@ -1,6 +1,8 @@
 ---
 layout: productpage
-title: Leak Proof Pumps
+title: Leak Proof Chemical Pump Dealer in Coimbatore
+heading: Leak Proof Pumps
+description: Leak Proof PP and GFP chemical pumps (PPE, RD, PPM and VPP series) for corrosive fluids, up to 400 m³/h and 100 m head. Supplied by Navaka, Coimbatore.
 permalink: /products/leak-proof-pumps/
 ---
 
@@ -8,9 +10,9 @@ permalink: /products/leak-proof-pumps/
 
 Navaka India offers a comprehensive range of leak-proof pumps designed for handling corrosive fluids and demanding industrial applications. Our pumps are engineered for reliability, durability, and superior performance in challenging environments.
 
-![Leak-Proof PPE series chemical pump]({{ '/assets/img/leak1.jpg' | relative_url }})
-![Leak-Proof RD series back-pull-out chemical pump]({{ '/assets/img/leak2.jpg' | relative_url }})
-![Leak-Proof chemical pump and motor assembly]({{ '/assets/img/leak3.jpg' | relative_url }})
+![Leak-Proof PPE series chemical pump]({{ '/assets/img/leak1.webp' | relative_url }})
+![Leak-Proof RD series back-pull-out chemical pump]({{ '/assets/img/leak2.webp' | relative_url }})
+![Leak-Proof chemical pump and motor assembly]({{ '/assets/img/leak3.webp' | relative_url }})
 
 *PPE series, RD series and a pump with motor assembly. These are different configurations, not multiple views of one pump.*
 

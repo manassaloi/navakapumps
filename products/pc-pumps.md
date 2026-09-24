@@ -1,6 +1,8 @@
 ---
 layout: productpage
-title: Navaka PC Pumps
+title: Progressive Cavity (PC) Pumps in Coimbatore
+heading: Navaka PC Pumps
+description: Navaka progressive cavity (PC) pumps for viscous fluids and demanding transfer duties. Contact our Coimbatore team for model selection and specifications.
 permalink: /products/pc-pumps/
 ---
 
@@ -8,7 +10,7 @@ permalink: /products/pc-pumps/
 
 Navaka India offers a comprehensive range of Navaka PC pumps engineered for superior performance across diverse industrial applications. Our pumps combine innovative design with robust construction to deliver reliable and efficient fluid handling solutions.
 
-![Illustration of a progressive cavity pump]({{ '/assets/img/products-range2.jpg' | relative_url }})
+![Illustration of a progressive cavity pump]({{ '/assets/img/products-range2.webp' | relative_url }})
 
 *Representative progressive cavity pump illustration. Configuration depends on the selected model.*
 

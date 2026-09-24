@@ -1,6 +1,7 @@
 ---
 layout: productpage
-title: Vithram Hygienic Pumps
+title: Vithram Hygienic Lobe & Twin Screw Pumps
+heading: Vithram Hygienic Pumps
 permalink: /products/vithram-hygienic-pumps/
 description: Explore Vithram VVR rotary lobe and VMV twin screw pumps from Navaka India for hygienic fluid handling.
 ---
@@ -9,7 +10,7 @@ Navaka India has expanded its product range through a business association with 
 
 ## VVR Rotary Lobe Pumps
 
-{% include product-image.html src="/assets/img/vithram-vvr-lobe-pump.jpg" alt="Cutaway view of the Vithram VVR rotary lobe pump" %}
+{% include product-image.html src="/assets/img/vithram-vvr-lobe-pump.webp" alt="Cutaway view of the Vithram VVR rotary lobe pump" %}
 
 The VVR series is designed for high-viscosity and shear-sensitive liquids, with efficient, precise flow even at low flow rates.
 
@@ -22,7 +23,7 @@ The VVR series is designed for high-viscosity and shear-sensitive liquids, with 
 
 ## VMV Twin Screw Pumps
 
-{% include product-image.html src="/assets/img/vithram-vmv-twin-screw-pump.jpg" alt="Vithram VMV hygienic twin screw pump" %}
+{% include product-image.html src="/assets/img/vithram-vmv-twin-screw-pump.webp" alt="Vithram VMV hygienic twin screw pump" %}
 
 The VMV series is suited to high-discharge-pressure service and gentle product transfer, including operation at high speeds.
 
